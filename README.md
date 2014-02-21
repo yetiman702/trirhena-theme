@@ -1,3 +1,8 @@
+trirhena-theme
+===
+Wordpress Theme für die TriRhena Seite 2014, basierend auf `_s`.
+
+
 _s
 ===
 
