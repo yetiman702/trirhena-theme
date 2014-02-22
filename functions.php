@@ -107,10 +107,19 @@ add_action( 'wp_enqueue_scripts', '_s_scripts' );
   	 * 3. Define css
   	 * 4. Print Menu
   	 */
+  	 
+  	 // FindCount nav items
   }
   
-  
-  
+  // Walker to count items
+  class Walker_Nav_Menu_Count extends Walker_Nav_Menu {
+  	function end_el( &$output, $item, $depth = 0, $args = array() ) 
+  	{
+	  	static $x = 0;
+			$x++;
+			$output  = $x;
+		}
+  }
   
 
 /**
