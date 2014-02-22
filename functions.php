@@ -42,7 +42,10 @@ function _s_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', '_s' ),
+		// menu on bottom of page
+		'bottom' => __( 'Bottom Menu', 'unten' ),
+		// menu on top of page
+		'top' => __( 'Top Menu', 'oben' ),
 	) );
 
 	// Enable support for Post Formats.
@@ -90,6 +93,25 @@ function _s_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
+
+
+/** 
+  * trirhena-theme functions 
+  */
+  
+  // Walker to spread the menu items evenly across the width
+  class Walker_Nav_Menu_Well_Spread extends Walker_Nav_Menu {
+  	/*
+  	 * 1. Find out number of items
+  	 * 2. Calculate width of each item
+  	 * 3. Define css
+  	 * 4. Print Menu
+  	 */
+  }
+  
+  
+  
+  
 
 /**
  * Implement the Custom Header feature.
