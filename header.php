@@ -34,8 +34,6 @@ error_reporting(E_ALL);
 
 			<?php 
 				
-				//var_dump(get_registered_nav_menus());
-				
 				$nav = wp_nav_menu( array( 
 					// Do not echo the menu
 					'echo' 						=> 1,
@@ -44,9 +42,8 @@ error_reporting(E_ALL);
 					// display here when set to top
 					'theme_location'	=> 'top',
 					// custom walker for well-spread menu
-					'walker'					=> new Walker_Nav_Menu_Well_Spread()
+					'walker'					=> new Walker_Nav_Menu_Count()
 				) ); 
-			  
 				
 			?>
 		</nav><!-- #site-navigation -->
