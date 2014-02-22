@@ -359,16 +359,22 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
+	width: 90%;
+	margin: 0 auto; 
 }
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	text-align:justify;
 }
 .main-navigation li {
+	/*
 	float: left;
 	position: relative;
+	*/
+	display: inline-block;
+	list-style:none;
 }
 .main-navigation a {
 	display: block;
