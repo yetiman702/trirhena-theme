@@ -364,7 +364,7 @@ a:active {
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
+	padding: 0;
 }
 .main-navigation li {
 	float: left;
@@ -399,6 +399,8 @@ a:active {
 .main-navigation ul ul a:hover {
 }
 .main-navigation ul li:hover > ul {
+	/* Sub-Pages beim Hovern nicht anzeigen: 
+	Nächste Zeile auskommentieren */
 	display: block;
 }
 .main-navigation .current_page_item a,
