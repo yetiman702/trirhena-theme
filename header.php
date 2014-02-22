@@ -31,7 +31,13 @@
 			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php 
+				wp_nav_menu( array( 
+					'theme_location' => 'primary', 
+					// Tiefe 1 = Nur Top-LEvel-Einträge anzeigen
+					'depth' => 1
+				) ); 
+			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
