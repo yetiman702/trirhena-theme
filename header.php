@@ -42,8 +42,8 @@ error_reporting(E_ALL);
 					'depth' 					=> 1,
 					// display here when set to top
 					'theme_location'	=> 'top',
-					// custom walker counts entries
-					'walker'					=> new Walker_Nav_Menu_Well_Spread()
+					// Walker
+					'walker'					=> new Walker_Nav_Menu_Extended()
 				) ); 
 				
 				

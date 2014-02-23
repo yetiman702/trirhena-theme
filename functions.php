@@ -98,11 +98,9 @@ add_action( 'wp_enqueue_scripts', '_s_scripts' );
 /** 
   * trirhena-theme functions 
   */
-  
-// Walker to spread the menu items evenly across the width
-class Walker_Nav_Menu_Well_Spread extends Walker_Nav_Menu
+class Walker_Nav_Menu_Extended extends Walker_Nav_Menu
 {
-} // Walker_Nav_Menu_Well_Spread
+}
 
 /**
  * Implement the Custom Header feature.
