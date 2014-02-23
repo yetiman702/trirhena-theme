@@ -46,7 +46,6 @@ error_reporting(E_ALL);
 						'depth' 					=> 1,
 						// display here when set to top
 						'theme_location'	=> 'top',
-						'before' 					=> '',
 						// Walker
 						'walker'					=> new Walker_Nav_Menu_Well_Spread()
 					) ); 
@@ -59,9 +58,9 @@ error_reporting(E_ALL);
 						// count only top-level entries
 						'depth' 					=> 1,
 						// display here when set to top
-						'theme_location'	=> 'top'
+						'theme_location'	=> 'top',
 						// Custom Walker for page menu
-						//'walker'					=> new Walker_Page_Menu_Well_Spread()
+						'walker'					=> new Walker_Page_Menu_Well_Spread()
 					) ); 
 				}	
 				
