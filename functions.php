@@ -138,9 +138,10 @@ class Walker_Nav_Menu_Well_Spread extends Walker_Nav_Menu
 		// count items in current menu object
 		$item_count	= $menu_obj->count;
 		
+		// calculate object width
+		$width = ( $item_count != 0) ? floor( 99 / $item_count ) : 1 ;
 		// prepare css style
-		$width = ( $item_count != 0) ? 99 / $item_count : 1 ;
-		$output .= $width;			
+		$cssstyle = "style=\"width:$width%\"";
 		/**
 		 * Filter the ID applied to a menu item's <li>.
 		 *
@@ -153,7 +154,7 @@ class Walker_Nav_Menu_Well_Spread extends Walker_Nav_Menu
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-		$output .= $indent . '<li' . $id . $value . $class_names .'>';
+		$output .= $indent . '<li' . $id . $value . $class_names . $cssstyle .'>';
 
 		$atts = array();
 		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
