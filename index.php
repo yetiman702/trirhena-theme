@@ -1,4 +1,5 @@
 <?php
+error_reporting(e_all);
 /**
  * The main template file.
  *

@@ -359,7 +359,7 @@ a:active {
 	clear: both;
 	display: block;
 	float: left;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto; 
 }
 .main-navigation ul {
@@ -369,12 +369,11 @@ a:active {
 	text-align:justify;
 }
 .main-navigation li {
-	/*
 	float: left;
 	position: relative;
-	*/
 	display: inline-block;
 	list-style:none;
+	text-align:center;
 }
 .main-navigation a {
 	display: block;
