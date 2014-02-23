@@ -33,17 +33,22 @@ error_reporting(E_ALL);
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 
 			<?php 
-				
-				$nav = wp_nav_menu( array( 
+							
+				// Count menu items
+				$n = wp_nav_menu( array( 
 					// Do not echo the menu
 					'echo' 						=> 1,
 					// count only top-level entries
 					'depth' 					=> 1,
 					// display here when set to top
 					'theme_location'	=> 'top',
-					// custom walker for well-spread menu
-					'walker'					=> new Walker_Nav_Menu_Count()
+					// custom walker counts entries
+					'walker'					=> new Walker_Nav_Menu_Well_Spread()
 				) ); 
+				
+				
+				// $walker = new Walker_Nav_Menu_Well_Spread();
+				// $menu = $walker->walk( $menu_items, 1 );
 				
 			?>
 		</nav><!-- #site-navigation -->
