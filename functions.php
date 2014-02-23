@@ -132,6 +132,10 @@ class Walker_Nav_Menu_Well_Spread extends Walker_Nav_Menu
 		if (isset($locations[$args->theme_location])) 
 		{
 				$menu_id = $locations[$args->theme_location];
+		} 
+		else
+		{
+			$menu_id = $locations['top'];
 		}
 		// Fetch current menu object
 		$menu_obj = wp_get_nav_menu_object( $menu_id );
@@ -212,6 +216,69 @@ class Walker_Nav_Menu_Well_Spread extends Walker_Nav_Menu
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 } // Walker_Nav_Menu_Well_Spread
+
+class Walker_Page_Menu_Well_Spread extends Walker_Page
+{
+	function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0 ) 
+	{
+		if ( $depth )
+			$indent = str_repeat("\t", $depth);
+		else
+			$indent = '';
+
+		extract($args, EXTR_SKIP);
+		$css_class = array('page_item', 'page-item-'.$page->ID);
+
+		if( isset( $args['pages_with_children'][ $page->ID ] ) )
+			$css_class[] = 'page_item_has_children';
+
+		if ( !empty($current_page) ) {
+			$_current_page = get_post( $current_page );
+			if ( in_array( $page->ID, $_current_page->ancestors ) )
+				$css_class[] = 'current_page_ancestor';
+			if ( $page->ID == $current_page )
+				$css_class[] = 'current_page_item';
+			elseif ( $_current_page && $page->ID == $_current_page->post_parent )
+				$css_class[] = 'current_page_parent';
+		} elseif ( $page->ID == get_option('page_for_posts') ) {
+			$css_class[] = 'current_page_parent';
+		}
+
+		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
+
+		if ( '' === $page->post_title )
+			$page->post_title = sprintf( __( '#%d (no title)' ), $page->ID );
+			
+			/**
+			 * Count items and generate CSS style
+			 *
+			 */
+			 
+			// Fetch current menu object
+			$menu_array = get_pages( array(
+				'post_type'	=> 'page',
+				'parent'	=> 0
+			) );
+			// count items in current menu object and add one for home screen
+			$item_count	= sizeof( $menu_array ) + 1;
+			// calculate object width
+			$width = ( $item_count != 0) ? floor( 99 / $item_count ) : 1 ;
+			// prepare css style
+			$cssstyle = "style=\"width:$width%\"";
+		
+		/** This filter is documented in wp-includes/post-template.php */
+		$output .= $indent . '<li class="' . $css_class . '"' . $cssstyle .'><a href="' . get_permalink($page->ID) . '">' . $link_before . apply_filters( 'the_title', $page->post_title, $page->ID ) . $link_after . '</a>';
+
+		if ( !empty($show_date) ) {
+			if ( 'modified' == $show_date )
+				$time = $page->post_modified;
+			else
+				$time = $page->post_date;
+
+			$output .= " " . mysql2date($date_format, $time);
+		}
+	}
+} // Walker_Page_Menu_Well_Spread
 
 /**
  * Implement the Custom Header feature.
