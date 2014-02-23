@@ -33,22 +33,38 @@ error_reporting(E_ALL);
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 
 			<?php 
-							
-				// Count menu items
-				$n = wp_nav_menu( array( 
-					// Do not echo the menu
-					'echo' 						=> 1,
-					// count only top-level entries
-					'depth' 					=> 1,
-					// display here when set to top
-					'theme_location'	=> 'top',
-					// custom walker counts entries
-					'walker'					=> new Walker_Nav_Menu_Well_Spread()
-				) ); 
+				/* check if nav menu at location 'top' is customized
+				 * if not wp falls back to the wp_page_menu which causes errors in the
+				 * Walker_Nav_Menu class and all of its extensions :( :(
+				 */ 
+				if (has_nav_menu('top')) 
+				{
+					wp_nav_menu( array( 
+						// Do not echo the menu
+						'echo' 						=> 1,
+						// count only top-level entries
+						'depth' 					=> 1,
+						// display here when set to top
+						'theme_location'	=> 'top',
+						'before' 					=> '',
+						// Walker
+						'walker'					=> new Walker_Nav_Menu_Well_Spread()
+					) ); 
+				}	
+				else // anticipate fallback on wp_page_menu
+				{
+					wp_page_menu( array( 
+						// Do not echo the menu
+						'echo' 						=> 1,
+						// count only top-level entries
+						'depth' 					=> 1,
+						// display here when set to top
+						'theme_location'	=> 'top'
+						// Custom Walker for page menu
+						//'walker'					=> new Walker_Page_Menu_Well_Spread()
+					) ); 
+				}	
 				
-				
-				// $walker = new Walker_Nav_Menu_Well_Spread();
-				// $menu = $walker->walk( $menu_items, 1 );
 				
 			?>
 		</nav><!-- #site-navigation -->
