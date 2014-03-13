@@ -78,7 +78,7 @@ html {
 	box-sizing:         border-box;
 }
 body {
-	background: #fff;
+	background: #101010;
 }
 article,
 aside,
@@ -173,7 +173,7 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
+	color: #ffffff;
 	font-family: dejavu, tahoma, sans-serif;
 	font-size: 12pt;
 	font-size: 1.6rem;
