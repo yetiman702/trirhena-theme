@@ -296,12 +296,14 @@ header#titlebar {
   clear:both;
   z-index:98;
 }
+
 /* Das Corporate Logo links oben */
 img.title-logo {
 	height:3em;
 	float:left;
 	margin:1em 1em 1em 5%;
 }
+
 /* Das div mit dem text zum Logo */
 div#logo-text {
   height:3em;
