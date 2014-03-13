@@ -304,7 +304,7 @@ img.title-logo {
 	margin:1em 1em 1em 5%;
 }
 
-/* Das div mit dem text zum Logo */
+/* Text zum Logo */
 div#logo-text {
   height:3em;
   margin:1.2em 0;
@@ -316,6 +316,14 @@ div#logo-text, div#logo-text a {
 	font-family:dejavu, sans-serif;
 	line-height:110%;
 }
+/* "TriRhena Consulting e.V." im Logo */	
+div#logo-text-normal {
+	}
+/* "Stud. Unternehmensberatung" im Logo */	
+div#logo-subtext {
+	font-size:55%;
+	text-transform:uppercase;
+	}
 	
 /*--------------------------------------------------------------
 4.0 Inputs and buttons
