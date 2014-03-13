@@ -29,6 +29,8 @@ and Blueprint http://www.blueprintcss.org/
 3.0 - Elements
 	3.1 - Basic Elements
 	3.2 - Layout Elements
+		3.2.1 - Top-Level Elements
+		3.2.2 - Top-Level Styles
 4.0 - Inputs and buttons
 5.0 - Navigation
 	5.1 - Links
@@ -287,6 +289,9 @@ th {
 /*--------------------------------------------------------------
 3.2 Layout Elements
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.2.1 Top-Level Layout Elements
+--------------------------------------------------------------*/
 /* Die Leiste mit Logo ganz oben */
 header#titlebar {
 	width:100%; 
@@ -310,6 +315,19 @@ div#logo-text {
   margin:1.2em 0;
   float:left;
 }
+
+/* Die Haupt Navigation mit Kacheln auf der Landing page */
+nav#site-navigation {
+	position:absolute; bottom:2em; left:0; 
+	z-index:99;
+	overflow:visible;
+	width:100%;
+	min-width:800px;
+}
+
+/*--------------------------------------------------------------
+3.2.1 Top-Level Styles
+--------------------------------------------------------------*/
 div#logo-text, div#logo-text a {
 	font-size:120%;
 	color:white;
@@ -318,12 +336,13 @@ div#logo-text, div#logo-text a {
 }
 /* "TriRhena Consulting e.V." im Logo */	
 div#logo-text-normal {
-	}
+}
 /* "Stud. Unternehmensberatung" im Logo */	
 div#logo-subtext {
 	font-size:55%;
 	text-transform:uppercase;
-	}
+}
+
 	
 /*--------------------------------------------------------------
 4.0 Inputs and buttons
