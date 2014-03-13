@@ -39,7 +39,13 @@ error_reporting(E_ALL);
 		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 	</div>
 
-	<nav id="site-navigation" class="main-navigation" role="navigation">
+	<div id="window">
+		<div id="header-img">
+			<img src="<?php header_image() ?>" id="header-img">
+		</div>
+		<!-- hier die Slideshow hin -->
+		<div id="claim"><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
 		<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 
@@ -78,5 +84,9 @@ error_reporting(E_ALL);
 			
 		?>
 	</nav><!-- #site-navigation -->
-
+	<nav id="sub" class="opacity-bg">
+		<!-- Funktioniert noch nicht! -->
+		<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
+	</nav>
+	</div><!-- /#window -->
 <div id="content" class="site-content">
