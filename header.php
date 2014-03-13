@@ -44,49 +44,51 @@ error_reporting(E_ALL);
 			<img src="<?php header_image() ?>" id="header-img">
 		</div>
 		<!-- hier die Slideshow hin -->
+		
 		<div id="claim"><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
+		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-		<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
+			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 
-		<?php 
-			/* check if nav menu at location 'top' is customized
-			 * if not wp falls back to the wp_page_menu which causes errors in the
-			 * Walker_Nav_Menu class and all of its extensions :( :(
-			 */ 
-			if (has_nav_menu('top')) 
-			{
-				wp_nav_menu( array( 
-					// Do not echo the menu
-					'echo' 						=> 1,
-					// count only top-level entries
-					'depth' 					=> 1,
-					// display here when set to top
-					'theme_location'	=> 'top',
-					// Walker
-					'walker'					=> new Walker_Nav_Menu_Well_Spread()
-				) ); 
-			}	
-			else // anticipate fallback on wp_page_menu
-			{
-				wp_page_menu( array( 
-					// Do not echo the menu
-					'echo' 						=> 1,
-					// count only top-level entries
-					'depth' 					=> 1,
-					// display here when set to top
-					'theme_location'	=> 'top',
-					// Custom Walker for page menu
-					'walker'					=> new Walker_Page_Menu_Well_Spread()
-				) ); 
-			}	
+			<?php 
+				/* check if nav menu at location 'top' is customized
+				 * if not wp falls back to the wp_page_menu which causes errors in the
+				 * Walker_Nav_Menu class and all of its extensions :( :(
+				 */ 
+				if (has_nav_menu('top')) 
+				{
+					wp_nav_menu( array( 
+						// Do not echo the menu
+						'echo' 						=> 1,
+						// count only top-level entries
+						'depth' 					=> 1,
+						// display here when set to top
+						'theme_location'	=> 'top',
+						// Walker
+						'walker'					=> new Walker_Nav_Menu_Well_Spread()
+					) ); 
+				}	
+				else // anticipate fallback on wp_page_menu
+				{
+					wp_page_menu( array( 
+						// Do not echo the menu
+						'echo' 						=> 1,
+						// count only top-level entries
+						'depth' 					=> 1,
+						// display here when set to top
+						'theme_location'	=> 'top',
+						// Custom Walker for page menu
+						'walker'					=> new Walker_Page_Menu_Well_Spread()
+					) ); 
+				}	
 			
 			
-		?>
-	</nav><!-- #site-navigation -->
-	<nav id="sub" class="opacity-bg">
-		<!-- Funktioniert noch nicht! -->
-		<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
-	</nav>
-	</div><!-- /#window -->
-<div id="content" class="site-content">
+			?>
+		</nav><!-- #site-navigation -->
+		<nav id="sub" class="opacity-bg">
+			<!-- Funktioniert noch nicht! -->
+			<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
+		</nav>
+		</div><!-- /#window -->
+	<div id="content" class="site-content">
