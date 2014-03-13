@@ -27,6 +27,8 @@ and Blueprint http://www.blueprintcss.org/
 1.0 - Reset and Opacity-definitions
 2.0 - Typography
 3.0 - Elements
+	3.1 - Basic Elements
+	3.2 - Layout Elements
 4.0 - Inputs and buttons
 5.0 - Navigation
 	5.1 - Links
@@ -243,6 +245,9 @@ big {
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+3.1 Basic Elements
+--------------------------------------------------------------*/
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -279,7 +284,30 @@ table {
 th {
 	font-weight: bold;
 }
-
+/*--------------------------------------------------------------
+3.2 Layout Elements
+--------------------------------------------------------------*/
+/* Die Leiste mit Logo ganz oben */
+header#titlebar {
+	width:100%; 
+	min-width:800px;
+	position:absolute;
+  height:5em;
+  clear:both;
+  z-index:98;
+}
+/* Das Corporate Logo links oben */
+img.title-logo {
+	height:3em;
+	float:left;
+	margin:1em 1em 1em 5%;
+}
+/* Das div mit dem text zum Logo */
+div#logo-text {
+  height:3em;
+  margin:1.2em 0;
+  float:left;
+}
 /*--------------------------------------------------------------
 4.0 Inputs and buttons
 --------------------------------------------------------------*/
