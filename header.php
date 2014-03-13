@@ -21,7 +21,19 @@ error_reporting(E_ALL);
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-
+	<header id="titlebar" class="opacity-bg">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<img src="<?php bloginfo('template_directory'); ?>/img/trc_circles.png" 
+				class="title-logo"
+				title="Corporate Logo: TriRhena Consulting -- Studentische Unternehmensberatung"
+				alt="TriRhena Corporate Logo und Schriftzug: TriRhena Consulting -- Studentische Unternehmensberatung">
+			<div id="logo-text">
+				<div id="logo-text-normal">TriRhena Consulting e.V.</div>
+				<div id="logo-subtext">Studentische Unternehmensberatung</div>
+			</div>
+		</a>
+	</header><!-- /#titlebar -->
+	
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

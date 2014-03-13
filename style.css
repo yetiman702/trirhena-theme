@@ -110,12 +110,6 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
-
-a {
-	color:#f49800;
-	text-decoration:none;
-}
-
 a:focus {
 	outline: thin dotted;
 }
@@ -391,15 +385,13 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
-}
-a:visited {
-	color: purple;
+	color:#f49800;
+	text-decoration:none;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	text-decoration:underline;
 }
 
 /*--------------------------------------------------------------
