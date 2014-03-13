@@ -110,6 +110,12 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
+
+a {
+	color:#f49800;
+	text-decoration:none;
+}
+
 a:focus {
 	outline: thin dotted;
 }
