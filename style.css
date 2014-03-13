@@ -310,6 +310,13 @@ div#logo-text {
   margin:1.2em 0;
   float:left;
 }
+div#logo-text, div#logo-text a {
+	font-size:120%;
+	color:white;
+	font-family:dejavu, sans-serif;
+	line-height:110%;
+}
+	
 /*--------------------------------------------------------------
 4.0 Inputs and buttons
 --------------------------------------------------------------*/
