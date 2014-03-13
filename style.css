@@ -24,7 +24,7 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Reset
+1.0 - Reset and Opacity-definitions
 2.0 - Typography
 3.0 - Elements
 4.0 - Inputs and buttons
@@ -121,6 +121,27 @@ a img {
 	border: 0;
 }
 
+/* Opacity-Definitions */
+.opacity {   
+  -khtml-opacity: 0.8 /* very old versions of Mozilla Firefox */
+  -moz-opacity: 0.8 /* Mozilla Fireox */
+  -webkit-opacity: 0.8 /* old Webkit-Browsers */
+  filter: alpha(opacity=80)   /* old versions of Internet Explorers inkluding IE 7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /* Internet Explorer 8 */
+  opacity: 0.8; /* Der Befehl mit Gültigkeit in allen Browsern in Zukunft? */
+}  
+
+.opacity-bg {
+	/* Fallback for web browsers that doesn't support RGBa */
+	background:rgb(0, 0, 0) transparent;
+	/* RGBa with 0.6 opacity */
+	background:rgba(0, 0, 0, 0.6);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+} 
+	
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
