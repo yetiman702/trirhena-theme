@@ -374,7 +374,55 @@ nav#sub {
 	font-size:.7em;
 }
 
+/* Kacheln zum Navigieren */
+nav.kacheln {
+	float:left;
+}
+/* Div um ul mit nav items */
+div.kacheln {	
+}
 
+li.page_item {
+	font-size:140%;
+	/* Einzelne Kachel */
+	list-style:none;
+	/* border:1px solid gray; */
+	float:left;
+	width:25%;
+	height:3em;
+}
+
+/* Einzelne Kachel */	
+li.page_item a {
+	color:white;
+	font-family:dejavu;
+	
+	display:block;
+	width:100%; 
+	height:1em;
+	text-align:center;
+	padding:1em 0;
+}
+	
+li.page_item a:hover {
+	/* Einzelne Kachel */
+	color:Black;
+	
+	/* Fallback for web browsers that doesn't support RGBa */
+	background:rgb(0, 0, 0) transparent;
+	/* RGBa with 0.6 opacity */
+	background:rgba(255, 255, 255, 0.6);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+} 
+
+div.align-right {
+	width:100%;
+	text-align:right;
+}
+	
 /*--------------------------------------------------------------
 3.2.1 Top-Level Styles
 --------------------------------------------------------------*/
