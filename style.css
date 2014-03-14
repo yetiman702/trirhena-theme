@@ -377,10 +377,13 @@ div.menu ul {
 /* Einzelne Kachel */
 li.page_item, li.menu-item, div.menu ul li {
 	display:table-cell;
+	width:24%;
 }
 
 /* Link in einzelner Kachel */	
 li.page_item a, li.menu-item a, div.menu ul li a {
+	height:100%;
+	color:white;
 }
 	
 li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
