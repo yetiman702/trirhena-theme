@@ -352,21 +352,31 @@ img#header-img {
 /* Der Bla Bla Bla-Text in der Mitte */
 div#claim {
 	position:absolute;
-	top:15%;
+	top:25%;
 	margin-left:30%;
 	margin-right:30%;
 	min-width:500px;
 	height:50%;
 	font-family:roboto;
 	color:white;
+	font-size:5em;
+	font-weight:bold;
 }
 
 /* Div um ul mit nav items */
 div.menu {	
+	width:100%;
+	display:table;
+}
+/* ul wrapper um menu items */
+div.menu ul {
+	width:100%;
+	display:table-row;
 }
 
 /* Einzelne Kachel */
 li.page_item, li.menu-item, div.menu ul li {
+	display:table-cell;
 }
 
 /* Link in einzelner Kachel */	
@@ -420,10 +430,6 @@ div#logo-text-normal {
 div#logo-subtext {
 	font-size:55%;
 	text-transform:uppercase;
-}
-/* Claim */
-div#claim * {
-	font-size:5em;
 }
 
 /*--------------------------------------------------------------
