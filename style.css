@@ -326,7 +326,7 @@ nav#site-navigation {
 }
 
 /* Das Große Hauptbild */
-div#header {
+div#window {
 	position:absolute;
 	width:100%;
 	/*min-height:700px;*/
