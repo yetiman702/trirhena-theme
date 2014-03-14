@@ -45,14 +45,12 @@ error_reporting(E_ALL);
 		<div id="header-img">
 			<img src="<?php echo get_background_image(); ?>" id="header-img">
 		</div>
-		<!-- hier die Slideshow hin -->
 		
+		<!-- hier die Slideshow hin -->
 		<div id="claim"><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
 		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', '_s' ); ?></h1>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
-
+			
 			<?php 
 				/* check if nav menu at location 'top' is customized
 				 * if not wp falls back to the wp_page_menu which causes errors in the
