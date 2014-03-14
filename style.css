@@ -370,10 +370,10 @@ li.page_item, li.menu-item, div.menu ul li {
 }
 
 /* Link in einzelner Kachel */	
-li.page_item a, div.menu ul li a {
+li.page_item a, li.menu-item a, div.menu ul li a {
 }
 	
-li.page_item a:hover, div.menu ul li a:hover {
+li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	/* Einzelne Kachel */
 	color:Black;
 	
