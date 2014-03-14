@@ -378,6 +378,7 @@ div.menu ul {
 li.page_item, li.menu-item, div.menu ul li {
 	display:table-cell;
 	width:24%;
+	height:4em;
 }
 
 /* Link in einzelner Kachel */	
