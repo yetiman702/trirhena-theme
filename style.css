@@ -358,42 +358,22 @@ div#claim {
 	min-width:500px;
 	height:50%;
 	font-family:roboto;
-	font-size:300%;
 	color:white;
 }
 
 /* Div um ul mit nav items */
-.table-row {	
-	display:table-row-group;
+div.menu {	
 }
 
-/* ul um li nav items */
-ul.main-nav {
-}
-
-li.page_item {
-	font-size:140%;
-	/* Einzelne Kachel */
-	list-style:none;
-	/* border:1px solid gray; */
-	float:left;
-	width:25%;
-	height:3em;
+/* Einzelne Kachel */
+li.page_item, div.menu ul li a {
 }
 
 /* Link in einzelner Kachel */	
-li.page_item a {
-	color:white;
-	font-family:dejavu;
-	
-	display:block;
-	width:100%; 
-	height:1em;
-	text-align:center;
-	padding:1em 0;
+li.page_item a, div.menu ul li a {
 }
 	
-li.page_item a:hover {
+li.page_item a:hover, div.menu ul li a:hover {
 	/* Einzelne Kachel */
 	color:Black;
 	
@@ -441,7 +421,11 @@ div#logo-subtext {
 	font-size:55%;
 	text-transform:uppercase;
 }
-	
+/* Claim */
+div#claim * {
+	font-size:5em;
+}
+
 /*--------------------------------------------------------------
 4.0 Inputs and buttons
 --------------------------------------------------------------*/
