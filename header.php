@@ -61,7 +61,9 @@ error_reporting(E_ALL);
 						// only top-level entries
 						'depth' 					=> 1,
 						// display here when set to top
-						'theme_location'	=> 'top'
+						'theme_location'	=> 'top',
+						// set class of div container
+						'container_class' => 'menu'
 					) ); 
 			?>
 		</nav><!-- #site-navigation -->
