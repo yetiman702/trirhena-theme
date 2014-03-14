@@ -52,12 +52,9 @@ error_reporting(E_ALL);
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			
 			<?php 
-				/* check if nav menu at location 'top' is customized
-				 * if not wp falls back to the wp_page_menu which causes errors in the
-				 * Walker_Nav_Menu class and all of its extensions :( :(
+				/* 
+				 * Print out the main nav menu
 				 */ 
-				if (has_nav_menu('top')) 
-				{
 					wp_nav_menu( array( 
 						// Do not echo the menu
 						'echo' 						=> 1,
@@ -65,25 +62,7 @@ error_reporting(E_ALL);
 						'depth' 					=> 1,
 						// display here when set to top
 						'theme_location'	=> 'top',
-						// Walker
-						'walker'					=> new Walker_Nav_Menu_Well_Spread()
 					) ); 
-				}	
-				else // anticipate fallback on wp_page_menu
-				{
-					wp_page_menu( array( 
-						// Do not echo the menu
-						'echo' 						=> 1,
-						// count only top-level entries
-						'depth' 					=> 1,
-						// display here when set to top
-						'theme_location'	=> 'top',
-						// Custom Walker for page menu
-						'walker'					=> new Walker_Page_Menu_Well_Spread()
-					) ); 
-				}	
-			
-			
 			?>
 		</nav><!-- #site-navigation -->
 		<nav id="sub" class="opacity-bg">
