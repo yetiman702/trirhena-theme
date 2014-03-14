@@ -52,19 +52,38 @@ error_reporting(E_ALL);
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			
 			<?php 
-				/* 
-				 * Print out the main nav menu
-				 */ 
-					wp_nav_menu( array( 
-						// Do not echo the menu
-						'echo' 						=> 1,
-						// only top-level entries
-						'depth' 					=> 1,
-						// display here when set to top
-						'theme_location'	=> 'top',
-						// set class of div container
-						'container_class' => 'menu'
-					) ); 
+					/* check if nav menu at location 'top' is customized
+	 				 * if not wp falls back to the wp_page_menu which causes errors in the
+					 * Walker_Nav_Menu class and all of its extensions :( :( AND
+					 * BEHAVES COMPLETELY DIFFERENT IN CSS!
+					 */  
+					 
+						if (has_nav_menu('top'))
+						{
+							wp_nav_menu( array(
+								// Do not echo the menu
+								'echo' => 1,
+								// count only top-level entries
+								'depth' => 1,
+								// display here when set to top
+								'theme_location'	=> 'top',
+								// wrap only nav items
+								'container_class' => 'menu opacity-bg'
+							) );
+						}	
+						else // anticipate fallback on wp_page_menu
+						{
+							wp_page_menu( array(
+								// Do not echo the menu
+								'echo' => 1,
+								// count only top-level entries
+								'depth' => 1,
+								// display here when set to top
+								'theme_location'	=> 'top',
+								// now wrap only page items
+								'menu_class' => 'menu opacity-bg'
+						) );
+						}	
 			?>
 		</nav><!-- #site-navigation -->
 		<nav id="sub" class="opacity-bg">
