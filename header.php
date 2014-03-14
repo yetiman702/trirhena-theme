@@ -58,10 +58,10 @@ error_reporting(E_ALL);
 					wp_nav_menu( array( 
 						// Do not echo the menu
 						'echo' 						=> 1,
-						// count only top-level entries
+						// only top-level entries
 						'depth' 					=> 1,
 						// display here when set to top
-						'theme_location'	=> 'top',
+						'theme_location'	=> 'top'
 					) ); 
 			?>
 		</nav><!-- #site-navigation -->

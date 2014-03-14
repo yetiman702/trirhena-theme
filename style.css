@@ -361,25 +361,14 @@ div#claim {
 	font-size:300%;
 	color:white;
 }
-/* Die Subnav mit Admin / Impressum etc */
-nav#sub {
-	position:absolute; bottom:2px; left:0;
-	z-index:97;
-	overflow:visible;
-	width:100%;
-	min-width:800px;
-	height:1.4em;
-	padding:2px 0;
-	
-	font-size:.7em;
+
+/* Div um ul mit nav items */
+.table-row {	
+	display:table-row-group;
 }
 
-/* Kacheln zum Navigieren */
-nav.kacheln {
-	float:left;
-}
-/* Div um ul mit nav items */
-div.kacheln {	
+/* ul um li nav items */
+ul.main-nav {
 }
 
 li.page_item {
@@ -392,7 +381,7 @@ li.page_item {
 	height:3em;
 }
 
-/* Einzelne Kachel */	
+/* Link in einzelner Kachel */	
 li.page_item a {
 	color:white;
 	font-family:dejavu;
@@ -421,6 +410,18 @@ li.page_item a:hover {
 div.align-right {
 	width:100%;
 	text-align:right;
+}
+/* Die Subnav mit Admin / Impressum etc */
+nav#sub {
+	position:absolute; bottom:2px; left:0;
+	z-index:97;
+	overflow:visible;
+	width:100%;
+	min-width:800px;
+	height:1.4em;
+	padding:2px 0;
+	
+	font-size:.7em;
 }
 	
 /*--------------------------------------------------------------
