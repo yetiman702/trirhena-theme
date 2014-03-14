@@ -366,7 +366,7 @@ div.menu {
 }
 
 /* Einzelne Kachel */
-li.page_item, div.menu ul li a {
+li.page_item, li.menu-item, div.menu ul li {
 }
 
 /* Link in einzelner Kachel */	
