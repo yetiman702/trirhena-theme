@@ -505,18 +505,18 @@ div.menu {
 	display:table;
 }
 /* ul wrapper um menu items */
-div.menu ul {
+.menu ul {
 	display:table-row-group;
 }
 
 /* Einzelne Kachel */
 li.page_item, li.menu-item, div.menu ul li {
 	display:table-cell;
-	height:4em;
 }
 
 /* Link in einzelner Kachel */	
 li.page_item a, li.menu-item a, div.menu ul li a {
+	height:4em;
 }
 	
 li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
@@ -533,10 +533,6 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 } 
 
-div.align-right {
-	width:100%;
-	text-align:right;
-}
 /* Die Subnav mit Admin / Impressum etc */
 nav#sub {
 	position:absolute; bottom:2px; left:0;
@@ -568,9 +564,11 @@ nav#sub {
 	list-style:none;
 	text-align:center;
 }
+/* Link der Menus */
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color:white;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -581,18 +579,7 @@ nav#sub {
 	top: 1.5em;
 	z-index: 99999;
 }
-.main-navigation ul ul ul {
-	left: 100%;
-	top: 0;
-}
-.main-navigation ul ul a {
-	width: 200px;
-}
-.main-navigation ul ul li {
-}
-.main-navigation ul li a {
-	color:white;
-}
+
 .main-navigation li:hover > a {
 }
 .main-navigation ul ul :hover > a {
