@@ -61,7 +61,7 @@ error_reporting(E_ALL);
 						if (has_nav_menu('top'))
 						{
 							wp_nav_menu( array(
-								// Do not echo the menu
+								// echo the menu
 								'echo' => 1,
 								// count only top-level entries
 								'depth' => 1,
@@ -74,7 +74,7 @@ error_reporting(E_ALL);
 						else // anticipate fallback on wp_page_menu
 						{
 							wp_page_menu( array(
-								// Do not echo the menu
+								// echo the menu
 								'echo' => 1,
 								// count only top-level entries
 								'depth' => 1,

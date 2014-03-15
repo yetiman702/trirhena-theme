@@ -504,14 +504,7 @@ div.menu {
 	width:100%;
 	display:table;
 }
-/* ul wrapper um menu items */
-.menu ul {
-}
 
-/* Einzelne Kachel */
-li.page_item, li.menu-item, div.menu ul li {
-}
-	
 li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	/* Einzelne Kachel */
 	color:Black;
@@ -554,7 +547,7 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 /* Link im Top-Menu */
 .main-navigation a
 {
-	padding:.5em 0;
+	padding:1em 0;
 }
 
 .main-navigation ul ul {
