@@ -47,9 +47,9 @@ error_reporting(E_ALL);
 		</div>
 		
 		<!-- hier die Slideshow hin -->
-		<div id="claim">
+		<div id="window">
 			<nav class="swipe">&laquo;</nav>
-			<h1>&laquo;Bla Bla Bla&raquo;</h1>
+			<span class="claim">&laquo;Bla Bla Bla&raquo;</span>
 			<nav class="swipe">&raquo;</nav>
 		</div>
 		

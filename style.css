@@ -352,28 +352,29 @@ img#header-img {
 	min-height:100%;
 }
 
-/* Der Bla Bla Bla-Text in der Mitte */
-div#claim {
+/* Big container for claim */
+div#window {
 	position:absolute;
-	/* should be equal to div#titlebar height-attribute */
-	top:5em;
-	margin-left:30%;
-	margin-right:30%;
+	top:0; left:0;
 	min-width:500px;
-	height:50%;
+	width:100%;
+	height:100%;
 	font-family:roboto;
 	color:white;
-	font-size:5em;
 	font-weight:bold;
-	background:blue;
 }
+/* Set correct margin for inner elements
+ * should be equal to div#titlebar height-attribute 
+ */
+
 /* navigation item for left and right swiping */
-#claim nav 
-{
+#window nav, #window span.claim {
+	margin-top:5em;
+	display:inline;
 }
 /* The Claim: Big Promise */
-#claim p 
-{
+.claim
+{	
 	font-size:300%;
 }
 	
