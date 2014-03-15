@@ -506,17 +506,10 @@ div.menu {
 }
 /* ul wrapper um menu items */
 .menu ul {
-	display:table-row-group;
 }
 
 /* Einzelne Kachel */
 li.page_item, li.menu-item, div.menu ul li {
-	display:table-cell;
-}
-
-/* Link in einzelner Kachel */	
-li.page_item a, li.menu-item a, div.menu ul li a {
-	height:4em;
 }
 	
 li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
@@ -532,19 +525,6 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	/* For IE 8*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 } 
-
-/* Die Subnav mit Admin / Impressum etc */
-nav#sub {
-	position:absolute; bottom:2px; left:0;
-	z-index:97;
-	overflow:visible;
-	width:100%;
-	min-width:800px;
-	height:1.4em;
-	padding:2px 0;
-	
-	font-size:.7em;
-}
 .main-navigation {
 	clear: both;
 	display: block;
@@ -557,10 +537,11 @@ nav#sub {
 	margin: 0;
 	padding: 0;
 	text-align:justify;
+	display:table-row-group;
 }
 .main-navigation li {
 	position: relative;
-	display: inline-block;
+	display:table-cell;
 	list-style:none;
 	text-align:center;
 }
@@ -570,6 +551,12 @@ nav#sub {
 	text-decoration: none;
 	color:white;
 }
+/* Link im Top-Menu */
+.main-navigation a
+{
+	padding:.5em 0;
+}
+
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
@@ -627,6 +614,18 @@ nav#sub {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+/* Die Subnav mit Admin / Impressum etc */
+nav#sub {
+	position:absolute; bottom:2px; left:0;
+	z-index:97;
+	overflow:visible;
+	width:100%;
+	min-width:800px;
+	height:1.4em;
+	padding:2px 0;
+	
+	font-size:.7em;
 }
 
 /*--------------------------------------------------------------
