@@ -297,6 +297,9 @@ header#titlebar {
 	width:100%; 
 	min-width:800px;
 	position:absolute;
+	/* Height should be equal to top-attribute of 
+	 * div#claim!
+	 */
   height:5em;
   clear:both;
   z-index:98;
@@ -352,7 +355,8 @@ img#header-img {
 /* Der Bla Bla Bla-Text in der Mitte */
 div#claim {
 	position:absolute;
-	top:25%;
+	/* should be equal to div#titlebar height-attribute */
+	top:5em;
 	margin-left:30%;
 	margin-right:30%;
 	min-width:500px;
@@ -361,6 +365,16 @@ div#claim {
 	color:white;
 	font-size:5em;
 	font-weight:bold;
+	background:blue;
+}
+/* navigation item for left and right swiping */
+#claim nav 
+{
+}
+/* The Claim: Big Promise */
+#claim p 
+{
+	font-size:300%;
 }
 	
 /*--------------------------------------------------------------
