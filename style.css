@@ -320,7 +320,7 @@ div#logo-text {
 nav#site-navigation {
 	position:absolute; bottom:2em; left:0; 
 	z-index:99;
-	overflow:visible;
+	overflow:visible;li
 	width:100%;
 	min-width:800px;
 }
@@ -370,14 +370,12 @@ div.menu {
 }
 /* ul wrapper um menu items */
 div.menu ul {
-	width:100%;
-	display:table-row;
+	display:table-row-group;
 }
 
 /* Einzelne Kachel */
 li.page_item, li.menu-item, div.menu ul li {
 	display:table-cell;
-	width:24%;
 	height:4em;
 }
 
@@ -567,7 +565,6 @@ a:active {
 	text-align:justify;
 }
 .main-navigation li {
-	float: left;
 	position: relative;
 	display: inline-block;
 	list-style:none;
