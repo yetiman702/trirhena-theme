@@ -353,28 +353,26 @@ img#header-img {
 }
 
 /* Big container for claim */
-div#window {
-	position:absolute;
-	top:0; left:0;
+#window {
+	float:left;
 	min-width:500px;
 	width:100%;
 	height:100%;
-	font-family:roboto;
-	color:white;
-	font-weight:bold;
 }
 /* Set correct margin for inner elements
  * should be equal to div#titlebar height-attribute 
  */
-
-/* navigation item for left and right swiping */
-#window nav, #window span.claim {
+#subwindow {
 	margin-top:5em;
+}
+/* navigation item for left and right swiping */
+#window nav {
 	display:inline;
 }
 /* The Claim: Big Promise */
 .claim
 {	
+	font-family:roboto;
 	font-size:300%;
 }
 	
