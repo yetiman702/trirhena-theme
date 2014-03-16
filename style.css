@@ -323,7 +323,7 @@ div#logo-text {
 nav#site-navigation {
 	position:absolute; bottom:2em; left:0; 
 	z-index:99;
-	overflow:visible;li
+	overflow:visible;
 	width:100%;
 	min-width:800px;
 }

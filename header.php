@@ -47,13 +47,12 @@ error_reporting(E_ALL);
 		</div>
 		
 		<!-- hier die Slideshow hin -->
-		<div id="window">
-			<div id="subwindow">
-				<nav class="swipe">&laquo;</nav>
-				<span class="claim">&laquo;Bla Bla Bla&raquo;</span>
-				<nav class="swipe">&raquo;</nav>
-			</div>
+		<div id="subwindow">
+			<nav class="swipe">&laquo;</nav>
+			<span class="claim">&laquo;Bla Bla Bla&raquo;</span>
+			<nav class="swipe">&raquo;</nav>
 		</div>
+	</div><!--- /#window -->
 		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			
