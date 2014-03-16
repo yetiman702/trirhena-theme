@@ -321,7 +321,7 @@ div#logo-text {
 
 /* Die Haupt Navigation mit Kacheln auf der Landing page */
 nav#site-navigation {
-	position:absolute; bottom:2em; left:0; 
+	position:relative;
 	z-index:99;
 	overflow:visible;
 	width:100%;
@@ -330,7 +330,6 @@ nav#site-navigation {
 
 /* Das Große Hauptbild */
 div#window {
-	position:absolute;
 	width:100%;
 	/*min-height:700px;*/
 	height:100%;
