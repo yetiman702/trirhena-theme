@@ -91,9 +91,11 @@ error_reporting(E_ALL);
 						}	
 			?>
 		</nav><!-- #site-navigation -->
+		<!--- No subnav
 		<nav id="sub" class="opacity-bg">
 			<!-- Funktioniert noch nicht! -->
 			<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
 		</nav>
+		--->
 		</div><!-- /#window -->
 	<div id="content" class="site-content">
