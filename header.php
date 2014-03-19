@@ -5,7 +5,7 @@ error_reporting(E_ALL);
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package _s
+ * @package trirhena_theme
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -85,6 +85,9 @@ error_reporting(E_ALL);
 						) );
 						}	
 			?>
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
+
 		</nav><!-- #site-navigation -->
 		<nav id="sub" class="opacity-bg">
 			<!-- Funktioniert noch nicht! -->
