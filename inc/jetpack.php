@@ -3,17 +3,17 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package _s
+ * @package trirhena_theme
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function _s_jetpack_setup() {
+function trirhena_theme_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 }
-add_action( 'after_setup_theme', '_s_jetpack_setup' );
+add_action( 'after_setup_theme', 'trirhena_theme_jetpack_setup' );
