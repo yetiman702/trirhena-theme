@@ -511,6 +511,7 @@ a:active {
 div.menu {	
 	width:100%;
 	display:table;
+	table-layout: fixed;
 }
 
 li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
@@ -534,16 +535,10 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	margin: 0 auto; 
 }
 .main-navigation ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	text-align:justify;
 	display:table-row-group;
 }
 .main-navigation li {
-	position: relative;
 	display:table-cell;
-	list-style:none;
 	text-align:center;
 }
 /* Link der Menus */
