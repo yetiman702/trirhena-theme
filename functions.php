@@ -48,12 +48,17 @@ function trirhena_theme_setup() {
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
-	// Setup the WordPress core custom background feature.
+	// Do not Setup the WordPress core custom background feature.
+	/*
 	add_theme_support( 'custom-background', apply_filters( 'trirhena_theme_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => get_template_directory_uri() . '/img/freiburg.jpg',
 	) ) );
-
+	*/
+	
+	// Setup the Custom Header feature
+	add_theme_support( 'custom-header', array( 'default-image' => get_template_directory_uri() . '/img/freiburg.jpg', ) );
+	
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
 }

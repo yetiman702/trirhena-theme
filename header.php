@@ -43,7 +43,7 @@ error_reporting(E_ALL);
 	
 	<div id="window">
 		<div id="header-img">
-			<img src="<?php echo get_background_image(); ?>" id="header-img">
+			<img src="<?php echo header_image(); ?>" id="header-img">
 		</div>
 		
 		<!-- hier die Slideshow hin -->
