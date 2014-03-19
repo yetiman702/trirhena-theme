@@ -1,8 +1,8 @@
 <?php
 /**
- * _s functions and definitions
+ * trirhena_theme functions and definitions
  *
- * @package _s
+ * @package trirhena_theme
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'trirhena_theme_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( '_s_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function _s_setup() {
+function trirhena_theme_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files
+	 * If you're building a theme based on trirhena_theme, use a find and replace
+	 * to change 'trirhena_theme' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( '_s', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'trirhena_theme', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -42,33 +42,30 @@ function _s_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		// menu on bottom of page
-		'bottom' => __( 'Unteres Menü', 'menu_unten' ),
-		// menu on top of page
-		'top' => __( 'Oberes Menü', 'menu_oben' ),
+		'primary' => __( 'Primary Menu', 'trirhena_theme' ),
 	) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
-		'default-color' => '000000',
+	add_theme_support( 'custom-background', apply_filters( 'trirhena_theme_custom_background_args', array(
+		'default-color' => 'ffffff',
 		'default-image' => get_template_directory_uri() . '/img/freiburg.jpg',
-	) ) );
+) ) );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array( 'comment-list', 'search-form', 'comment-form', ) );
 }
-endif; // _s_setup
-add_action( 'after_setup_theme', '_s_setup' );
+endif; // trirhena_theme_setup
+add_action( 'after_setup_theme', 'trirhena_theme_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function _s_widgets_init() {
+function trirhena_theme_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', '_s' ),
+		'name'          => __( 'Sidebar', 'trirhena_theme' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -76,23 +73,23 @@ function _s_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'trirhena_theme_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+function trirhena_theme_scripts() {
+	wp_enqueue_style( 'trirhena_theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'trirhena_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'trirhena_theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', 'trirhena_theme_scripts' );
 
 
 /** 
