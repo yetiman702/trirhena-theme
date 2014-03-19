@@ -5,7 +5,7 @@ error_reporting(E_ALL);
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package _s
+ * @package trirhena_theme
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -55,7 +55,6 @@ error_reporting(E_ALL);
 	</div><!--- /#window -->
 		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			
 			<?php 
 					/* check if nav menu at location 'top' is customized
 	 				 * if not wp falls back to the wp_page_menu which causes errors in the
@@ -90,6 +89,10 @@ error_reporting(E_ALL);
 						) );
 						}	
 			?>
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
+
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 		<!--- No subnav
 		<nav id="sub" class="opacity-bg">
