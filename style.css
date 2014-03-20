@@ -183,7 +183,7 @@ input,
 select,
 textarea {
 	color: #ffffff;
-	font-family: dejavu, tahoma, sans-serif;
+	font-family: verdana, dejavu, tahoma, sans-serif;
 	font-size: 12pt;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -379,6 +379,10 @@ div#content {
 /*--------------------------------------------------------------
 3.2.1 Top-Level Styles
 --------------------------------------------------------------*/
+#site-navigation, #site-navigation * {
+	font-family:dejavu;
+}
+
 div#logo-text, div#logo-text a {
 	font-size:120%;
 	color:white;
