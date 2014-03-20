@@ -90,7 +90,12 @@ html {
 	box-sizing:         border-box;
 }
 body {
-	background: #101010;
+	background: #5CADFF;
+	background-position-y: 50%;
+	background-size: cover;
+	/* animate position with: 
+	background-position-x: 100%;
+	*/
 }
 article,
 aside,

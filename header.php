@@ -42,9 +42,6 @@ error_reporting(E_ALL);
 	-->
 	
 	<div id="window">
-		<div id="header-img">
-			<img src="<?php echo header_image(); ?>" id="header-img">
-		</div>
 		
 		<!-- hier die Slideshow hin -->
 		<div id="claim"><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
