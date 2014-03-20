@@ -334,10 +334,9 @@ nav#site-navigation {
 div#window {
 	position:absolute;
 	width:100%;
-	/*min-height:700px;*/
 	height:100%;
 	min-height:400px;
-	background: yellow no-repeat top center / cover transparent;
+	background: no-repeat top center / cover transparent;
 }
 
 div#header-img {
@@ -386,7 +385,7 @@ div#content {
 div#logo-text, div#logo-text a {
 	font-size:120%;
 	color:white;
-	font-family:dejavu, sans-serif;
+	font-family:dejavu, verdana, sans-serif;
 	line-height:110%;
 }
 /* "TriRhena Consulting e.V." im Logo */	
