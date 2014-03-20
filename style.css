@@ -736,6 +736,10 @@ nav#sub {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+.site-main {
+	padding:1em 3em;
+}
+
 .sticky {
 }
 .hentry {
@@ -757,6 +761,12 @@ nav#sub {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-title {
+	font-family:dejavu, verdana, sans-serif;
+	font-size:140%;
+	padding: 3em 0 1em 0;
 }
 
 /*--------------------------------------------------------------
