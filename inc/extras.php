@@ -16,7 +16,7 @@
  */
 function trirhena_theme_page_menu_args( $args ) {
 	$args['show_home'] = true;
-	$args['menu_class'] = 'menu opacity-bg';
+	$args['menu_class'] = $args['container_class'];
 	return $args;
 }
 add_filter( 'wp_page_menu_args', 'trirhena_theme_page_menu_args' );
