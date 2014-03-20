@@ -337,7 +337,7 @@ div#window {
 	/*min-height:700px;*/
 	height:100%;
 	min-height:400px;
-	background:/*url('img/freiburg.jpg')*/ yellow no-repeat /* fixed */ top center / cover transparent;
+	background: yellow no-repeat top center / cover transparent;
 }
 
 div#header-img {
@@ -368,6 +368,14 @@ div#claim {
 	font-weight:bold;
 }
 	
+div#content {
+	position:absolute;
+	top:100%;
+	display:block;
+	background:white;
+	color:#444444	;
+}
+
 /*--------------------------------------------------------------
 3.2.1 Top-Level Styles
 --------------------------------------------------------------*/
