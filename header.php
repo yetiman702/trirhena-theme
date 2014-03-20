@@ -58,32 +58,14 @@ error_reporting(E_ALL);
 					 * BEHAVES COMPLETELY DIFFERENT IN CSS!
 					 */  
 					 
-						if (has_nav_menu('top'))
-						{
-							wp_nav_menu( array(
-								// echo the menu
-								'echo' => 1,
+						wp_nav_menu( array(
 								// count only top-level entries
 								'depth' => 1,
 								// display here when set to top
-								'theme_location'	=> 'top',
-								// wrap only nav items
-								'container_class' => 'menu opacity-bg'
+								'theme_location' => 'primary',
+								'container_class' => 'menu opacity-bg',
+								'fallback_cb' => 'wp_page_menu'
 							) );
-						}	
-						else // anticipate fallback on wp_page_menu
-						{
-							wp_page_menu( array(
-								// echo the menu
-								'echo' => 1,
-								// count only top-level entries
-								'depth' => 1,
-								// display here when set to top
-								'theme_location'	=> 'top',
-								// now wrap only page items
-								'menu_class' => 'menu opacity-bg'
-						) );
-						}	
 			?>
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
