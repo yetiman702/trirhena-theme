@@ -2,7 +2,7 @@
 /**
  * Sample implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
-	 *
+ *
  * @package trirhena_theme
  */
 
@@ -18,13 +18,9 @@
 function trirhena_theme_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'trirhena_theme_custom_header_args', array(
 		'default-image'          => get_template_directory_uri() . '/img/trc_circles.png',
-		//'default-text-color'     => '000000',
+		'default-text-color'     => 'FFFFFF',
 		'width'                  => 44,
-		'height'                 => 48//,
-		//'flex-height'            => true,
-		//'wp-head-callback'       => 'trirhena_theme_header_style',
-		//'admin-head-callback'    => 'trirhena_theme_admin_header_style',
-		//'admin-preview-callback' => 'trirhena_theme_admin_header_image',
+		'height'                 => 48
 	) ) );
 }
 add_action( 'after_setup_theme', 'trirhena_theme_custom_header_setup' );
