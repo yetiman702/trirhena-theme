@@ -306,27 +306,38 @@ th {
 3.2.1 Top-Level Layout Elements
 --------------------------------------------------------------*/
 /* Die Leiste mit Logo ganz oben */
-header#titlebar {
+#masthead{
 	width:100%; 
 	min-width:800px;
 	position:absolute;
-  height:5em;
-  clear:both;
-  z-index:98;
+	height:5em;
+	clear:both;
+	z-index:98;
+
+	/* Fonts */
+	font-size:120%;
+	color:white;
+	font-family:dejavu, sans-serif;
+	line-height:110%;
 }
 
 /* Das Corporate Logo links oben */
-img.title-logo {
+#masthead img {
 	height:3em;
 	float:left;
 	margin:1em 1em 1em 5%;
 }
 
 /* Text zum Logo */
-div#logo-text {
+#masthead div {
   height:3em;
   margin:1.2em 0;
   float:left;
+}
+
+#masthead h2 {
+	font-size:55%;
+	text-transform:uppercase;
 }
 
 /* Die Haupt Navigation mit Kacheln auf der Landing page */
@@ -380,18 +391,14 @@ div#claim {
 3.2.1 Top-Level Styles
 --------------------------------------------------------------*/
 div#logo-text, div#logo-text a {
-	font-size:120%;
-	color:white;
-	font-family:dejavu, sans-serif;
-	line-height:110%;
+	
 }
 /* "TriRhena Consulting e.V." im Logo */	
 div#logo-text-normal {
 }
 /* "Stud. Unternehmensberatung" im Logo */	
 div#logo-subtext {
-	font-size:55%;
-	text-transform:uppercase;
+	
 }
 
 /*--------------------------------------------------------------

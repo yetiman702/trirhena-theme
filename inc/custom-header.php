@@ -2,16 +2,7 @@
 /**
  * Sample implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
- *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-
- *
+	 *
  * @package trirhena_theme
  */
 
@@ -26,14 +17,14 @@
  */
 function trirhena_theme_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'trirhena_theme_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'trirhena_theme_header_style',
-		'admin-head-callback'    => 'trirhena_theme_admin_header_style',
-		'admin-preview-callback' => 'trirhena_theme_admin_header_image',
+		'default-image'          => get_template_directory_uri() . '/img/trc_circles.png',
+		//'default-text-color'     => '000000',
+		'width'                  => 44,
+		'height'                 => 48//,
+		//'flex-height'            => true,
+		//'wp-head-callback'       => 'trirhena_theme_header_style',
+		//'admin-head-callback'    => 'trirhena_theme_admin_header_style',
+		//'admin-preview-callback' => 'trirhena_theme_admin_header_image',
 	) ) );
 }
 add_action( 'after_setup_theme', 'trirhena_theme_custom_header_setup' );
