@@ -1,14 +1,6 @@
 /*
-<<<<<<< HEAD
 Theme Name: trirhena-theme
 Theme URI: http://trirhena-consulting.de/
-||||||| merged common ancestors
-Theme Name: _s
-Theme URI: http://underscores.me/
-=======
-Theme Name: trirhena_theme
-Theme URI: http://underscores.me/
->>>>>>> 1e7fe7ac9444c1d7a36bd1aa0220ad7005f25e24
 Author: Automattic
 Description: Based on _s: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 Version: 1.0-wpcom
@@ -191,7 +183,7 @@ input,
 select,
 textarea {
 	color: #ffffff;
-	font-family: dejavu, tahoma, sans-serif;
+	font-family: verdana, dejavu, tahoma, sans-serif;
 	font-size: 12pt;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -309,7 +301,7 @@ th {
 #masthead{
 	width:100%; 
 	min-width:800px;
-	position:absolute;
+	position:fixed;
 	height:5em;
 	clear:both;
 	z-index:98;
@@ -330,7 +322,7 @@ th {
 
 	/* Fonts */
 	font-size:120%;
-	font-family:dejavu, sans-serif;
+	font-family:dejavu, verdana, sans-serif;
 	line-height:110%;
 }
 
@@ -352,10 +344,9 @@ nav#site-navigation {
 div#window {
 	position:absolute;
 	width:100%;
-	/*min-height:700px;*/
 	height:100%;
 	min-height:400px;
-	background:/*url('img/freiburg.jpg')*/ yellow no-repeat /* fixed */ top center / cover transparent;
+	background: no-repeat top center / cover transparent;
 }
 
 /* Der Bla Bla Bla-Text in der Mitte */
@@ -370,6 +361,25 @@ div#claim {
 	color:white;
 	font-size:5em;
 	font-weight:bold;
+}
+	
+div#content {
+	position:absolute;
+	top:100%;
+	display:block;
+	background:white;
+	color:#444444	;
+}
+
+#colophon {
+	display:none;
+}
+
+/*--------------------------------------------------------------
+3.2.1 Top-Level Styles
+--------------------------------------------------------------*/
+#site-navigation, #site-navigation * {
+	font-family:dejavu;
 }
 
 /*--------------------------------------------------------------
@@ -596,7 +606,7 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 }
 /* Die Subnav mit Admin / Impressum etc */
 nav#sub {
-	position:absolute; bottom:2px; left:0;
+	position:fixed; bottom:2px; left:0;
 	z-index:97;
 	overflow:visible;
 	width:100%;
@@ -707,6 +717,10 @@ nav#sub {
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+.site-main {
+	padding:1em 3em;
+}
+
 .sticky {
 }
 .hentry {
@@ -728,6 +742,12 @@ nav#sub {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-title {
+	font-family:dejavu, verdana, sans-serif;
+	font-size:140%;
+	padding: 3em 0 1em 0;
 }
 
 /*--------------------------------------------------------------
