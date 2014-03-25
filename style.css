@@ -130,6 +130,11 @@ a img {
 	border: 0;
 }
 
+a.nolink:hover, a.nolink:active, a.nolink.visited{
+	color: inherit;
+	text-decoration: none;
+}
+
 /* Opacity-Definitions */
 .opacity {   
   -khtml-opacity: 0.8 /* very old versions of Mozilla Firefox */
@@ -302,23 +307,24 @@ th {
 	width:100%; 
 	min-width:800px;
 	position:fixed;
-	height:5em;
-	clear:both;
-	z-index:98;
+	height:76px;
+	z-index:99;
+	padding-left: 5%;
 }
 
-/* Das Corporate Logo links oben */
-#masthead img {
-	height:3em;
-	float:left;
-	margin:1em 1em 1em 5%;
+#header-image{
+	position: fixed;
+	left: 5%;
+	top: 14px;
+	height: 48px;
+	width: 44px;
+	z-index: 100;
 }
 
 /* Text zum Logo */
-#masthead div {
-	height:3em;
-	margin:1.2em 0;
-	float:left;
+#header-text {
+	position: relative;
+	top: 20px;
 
 	/* Fonts */
 	font-size:120%;
@@ -335,7 +341,7 @@ th {
 nav#site-navigation {
 	position:absolute; bottom:2em; left:0; 
 	z-index:99;
-	overflow:visible;li
+	overflow:visible;
 	width:100%;
 	min-width:800px;
 }
@@ -392,7 +398,7 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	/*vertical-align: middle; /* Improves appearance and consistency in all browsers */
 }
 button,
 input[type="button"],
