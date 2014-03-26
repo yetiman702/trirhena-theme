@@ -607,7 +607,7 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 /* Die Subnav mit Admin / Impressum etc */
 nav#sub {
 	position:fixed; bottom:2px; left:0;
-	z-index:97;
+	z-index:99;
 	overflow:visible;
 	width:100%;
 	min-width:800px;
