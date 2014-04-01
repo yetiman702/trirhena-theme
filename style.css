@@ -541,6 +541,8 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	text-decoration: none;
 	color:white;
 	padding:1em 0;
+	height:76px;
+	line-height:38px;
 }
 
 #site-navigation ul ul {
