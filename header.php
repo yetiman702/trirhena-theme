@@ -21,8 +21,8 @@ error_reporting(E_ALL);
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<header id="masthead" class="site-branding opacity-bg">
-		<div id="header-text" style="padding-left:<?php echo((get_header_image())? 60 : 0); ?>px;">
+	<header id="masthead" class="site-branding">
+		<div id="site-branding" class="opacity-bg" style="padding-left:<?php echo((get_header_image())? 120 : 60); ?>px;">
 			<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nolink" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo( 'name' ); ?></a>
 			</h1>
@@ -30,41 +30,34 @@ error_reporting(E_ALL);
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nolink" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo( 'description' ); ?></a>
 			</h2>
 		</div>
-	</header>
 
-	<nav id="site-navigation" class="main-navigation opacity-bg" role="navigation">
-		<?php
-		wp_nav_menu( array(
-						   // count only top-level entries
-						   'depth' => 1,
-						   // display here when set to top
-						   'theme_location' => 'primary',
-						   'container_class' => 'menu',
-						   'fallback_cb' => 'wp_page_menu'
-			) );
-		?>
-		<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
-	</nav><!-- #site-navigation -->
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home", class="nolink">
-		<img src="<?php header_image(); ?>"
-			id="header-image"
-			title="<?php bloginfo( 'name' ); ?> -- <?php bloginfo( 'description' ); ?>"
-			alt="<?php bloginfo( 'name' ); ?> -- <?php bloginfo( 'description' ); ?>">
-	</a>
-	<?php endif; // End header image check. ?>
-
-	
-	<div id="window">
-		
 		<!-- hier die Slideshow hin -->
 		<div id="claim"><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
-		
-		<nav id="sub" class="opacity-bg">
-			<!-- Funktioniert noch nicht! -->
-			<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
-		</nav>
-		</div><!-- /#window -->
+
+		<nav id="site-navigation" class="opacity-bg" role="navigation">
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
+			<?php
+				wp_nav_menu( array(
+								   // count only top-level entries
+								   'depth' => 1,
+								   // display here when set to top
+								   'theme_location' => 'primary',
+								   'container_class' => 'menu',
+								   'fallback_cb' => 'wp_page_menu'
+							 ) 
+				);
+			?>
+		</nav><!-- #site-navigation -->
+
+		<?php if ( get_header_image() ) : ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home", class="nolink">
+			<img src="<?php header_image(); ?>"
+				id="header-image"
+				title="<?php bloginfo( 'name' ); ?> -- <?php bloginfo( 'description' ); ?>"
+				alt="<?php bloginfo( 'name' ); ?> -- <?php bloginfo( 'description' ); ?>">
+		</a>
+		<?php endif; // End header image check. ?>
+	</header>
+
 	<div id="content" class="site-content">

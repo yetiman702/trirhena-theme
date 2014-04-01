@@ -304,17 +304,15 @@ th {
 --------------------------------------------------------------*/
 /* Die Leiste mit Logo ganz oben */
 #masthead{
+	position: absolute;
 	width:100%; 
 	min-width:800px;
-	position:fixed;
-	height:76px;
 	z-index:99;
-	padding-left: 5%;
 }
 
 #header-image{
 	position: fixed;
-	left: 5%;
+	left: 60px;
 	top: 14px;
 	height: 48px;
 	width: 44px;
@@ -322,9 +320,11 @@ th {
 }
 
 /* Text zum Logo */
-#header-text {
-	position: relative;
-	top: 20px;
+#site-branding {
+	position: fixed;
+	padding-top: 20px;
+	height: 76px;
+	width: 100%;
 
 	/* Fonts */
 	font-size:120%;
@@ -339,35 +339,31 @@ th {
 
 /* Die Haupt Navigation mit Kacheln auf der Landing page */
 nav#site-navigation {
-	position:absolute; bottom:2em; left:0; 
+	position: relative;
+	width: 100%;
+	height: 76px;
+	bottom: 76px;
 	z-index:99;
 	overflow:visible;
-	width:100%;
-	min-width:800px;
-}
-
-/* Das Große Hauptbild */
-div#window {
-	position:absolute;
-	width:100%;
-	height:100%;
-	min-height:400px;
-	background: no-repeat top center / cover transparent;
 }
 
 /* Der Bla Bla Bla-Text in der Mitte */
 div#claim {
-	position:absolute;
-	top:25%;
-	margin-left:30%;
-	margin-right:30%;
-	min-width:500px;
-	height:50%;
+	/* space for site-branding */
+	margin-top: 76px;
+	/* space for site-menu */
+	margin-bottom: 76px;
+	width: 100%;
+	/* heigth and padding is changeable for design purposes */
+	height: 300px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	display: table;
+	text-align: center;
 	font-family:roboto;
 	color:white;
 	font-size:5em;
 	font-weight:bold;
-	text-align:center;
 }
 	
 div#content {
@@ -526,34 +522,28 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
 	/* For IE 8*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-} 
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-	margin: 0 auto; 
 }
-.main-navigation ul {
+
+#site-navigation div {
+	height: 100%;
+}
+
+#site-navigation ul {
 	display:table-row-group;
 }
-.main-navigation li {
+#site-navigation li {
 	display:table-cell;
 	text-align:center;
 }
 /* Link der Menus */
-.main-navigation a {
+#site-navigation a {
 	display: block;
 	text-decoration: none;
 	color:white;
-}
-/* Link im Top-Menu */
-.main-navigation a
-{
 	padding:1em 0;
 }
 
-.main-navigation ul ul {
+#site-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
 	float: left;
@@ -563,19 +553,19 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	z-index: 99999;
 }
 
-.main-navigation li:hover > a {
+#site-navigation li:hover > a {
 }
-.main-navigation ul ul :hover > a {
+#site-navigation ul ul :hover > a {
 }
-.main-navigation ul ul a:hover {
+#site-navigation ul ul a:hover {
 }
-.main-navigation ul li:hover > ul {
+#site-navigation ul li:hover > ul {
 	/* Sub-Pages beim Hovern nicht anzeigen: 
 	Nächste Zeile auskommentieren */
 	display: block;
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
+#site-navigation .current_page_item a,
+#site-navigation .current-menu-item a {
 }
 /* Small menu */
 .menu-toggle {
@@ -584,11 +574,11 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 }
 @media screen and (max-width: 600px) {
 	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
+	#site-navigation.toggled .nav-menu {
 		display: block;
 	}
 
-	.main-navigation ul {
+	#site-navigation ul {
 		display: none;
 	}
 }

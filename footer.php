@@ -18,6 +18,10 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<nav id="sub" class="opacity-bg">
+	<!-- Funktioniert noch nicht! -->
+	<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
+</nav>
 
 <?php wp_footer(); ?>
 
