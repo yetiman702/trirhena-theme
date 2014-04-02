@@ -112,12 +112,23 @@ caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";
 }
+blockquote:before {
+	display: block;
+	font-size: 80px;
+	content: "\201C";
+	position: absolute;
+	margin-top:-40px;
+	margin-left: -35px;
+	font-family: georgia, times, serif;
+}
 blockquote, q {
-	quotes: "" "";
+	quotes: "«" "»";
+	overflow: hidden;
 }
 
 /* Opacity-Definitions */
@@ -180,9 +191,13 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: dejavu;
+}
+h2 {
+	font-size: 180%;
+	padding: .5em 0;
 }
 p {
-	margin-bottom: 1.5em;
 	text-align: justify;
 }
 b, strong {
@@ -192,8 +207,12 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 blockquote {
-	margin: 0 1.5em;
 	font-style: italic;
+	font-family: georgia, times, serif;
+	background: #eeeeee;
+	border-left: 2px solid #aaaaaa;
+	margin: 2em;
+	padding: 2em 2.5em 2em 4em;
 }
 address {
 	margin: 0 0 1.5em;
@@ -351,9 +370,15 @@ div#claim {
 	font-size: 5em;
 	font-weight: bold;
 }
+
+#claim h1 {
+	font-family: roboto;
+}
 	
 div#content {
 	position: relative;
+	width:100%;
+	min-width: 800px;
 	display: block;
 	background: white;
 	color: #444444;
@@ -491,7 +516,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color:#f49800;
-	/* text-decoration:none; */
+	text-decoration:none;
 }
 a img {
 	border: 0;
@@ -519,7 +544,7 @@ a.big {
 	font-family: dejavu;
 	font-size: 26pt;
 }
-a.big:hover, #sub a:hover {
+a.gray:hover, .edit-link a:hover, .foot-menu a:hover {
 	color: #858585;
 }
 .entry-title a {
@@ -530,13 +555,10 @@ a.time {
 	text-decoration: none;
 }
 
-#sub a
-{
+.edit-link a, .foot-menu a, a.gray {
 	color: #999999;
 	text-decoration: none;
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -800,7 +822,7 @@ nav#sub {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .site-main {
-	padding:1em 3em;
+	padding: 1em 8%;
 }
 
 .sticky {
@@ -824,17 +846,43 @@ nav#sub {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+}
+.entry-title {
+	font-family: dejavu, verdana, sans-serif;
+	font-size:28pt;
+}
+h1.entry-title {
+	padding-top: 1.5em;
+}
+.entry-content p, .entry-content blockquote {
+}
+.entry-content h2 {
+	clear: none;
+	margin-top: 1em;
+}
+.entry-content img {
+	padding: 2em;
+}
+.entry-content blockquote {
+	overflow: auto;
+	clear:none;
 }
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+div.edit-link {
+	display: block;
+	float: right;
+}
+.edit-link a {
+	height: 20px;
+	line-height: 10px;
+}
 
-.entry-title {
-	font-family:dejavu, verdana, sans-serif;
-	font-size:28pt;
-	padding: 2em 0 1em 0;
+img.edit-link {
+	display: inline;
+	height: 20px;
 }
 
 /*--------------------------------------------------------------

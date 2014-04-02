@@ -20,5 +20,5 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'trirhena_theme' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( '<img src="'.get_template_directory_uri().'/img/gear.png" class="edit-link">'.__('Edit' , 'trirhena_theme'), '<footer class="entry-meta"><div class="edit-link">', '</div></footer>' ); ?>
 </article><!-- #post-## -->

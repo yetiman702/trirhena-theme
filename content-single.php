@@ -53,7 +53,7 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'trirhena_theme' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( '<img src="'.get_template_directory_uri().'/img/gear.png" class="edit-link">'.__('Edit' , 'trirhena_theme'), 'trirhena_theme' ), '<div class="edit-link">', '</div>' ); ?>
 		<div class="entry-meta">
 			<?php trirhena_theme_posted_on(); ?>
 		</div><!-- .entry-meta -->
