@@ -112,12 +112,22 @@ caption, th, td {
 	font-weight: normal;
 	text-align: left;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";
 }
+blockquote:before {
+	display: block;
+	font-size: 80px;
+	content: "\201C";
+	position: absolute;
+	margin-top:-40px;
+	margin-left: -35px;
+	font-family: georgia, times, serif;
+}
 blockquote, q {
-	quotes: "" "";
+	quotes: "«" "»";
 }
 
 /* Opacity-Definitions */
@@ -180,6 +190,11 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: dejavu;
+}
+h2 {
+	font-size: 180%;
+	padding: .5em 0;
 }
 p {
 	margin-bottom: 1.5em;
@@ -192,8 +207,12 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 blockquote {
-	margin: 0 1.5em;
 	font-style: italic;
+	font-family: georgia, times, serif;
+	background: #eeeeee;
+	border-left: 2px solid #aaaaaa;
+	margin: 2em;
+	padding: 2em 2.5em .3em 4em;
 }
 address {
 	margin: 0 0 1.5em;
@@ -349,6 +368,10 @@ div#claim {
 	font-size: 5em;
 	font-weight: bold;
 }
+
+#claim h1 {
+	font-family: roboto;
+}
 	
 div#content {
 	position: relative;
@@ -489,7 +512,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color:#f49800;
-	/* text-decoration:none; */
+	text-decoration:none;
 }
 a img {
 	border: 0;
@@ -822,7 +845,13 @@ nav#sub {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+/*	margin: 1.5em 0 0; */
+}
+.entry-content h2, .entry-header h1 {
+	clear: none;
+}
+.entry-content img {
+	padding: 2em;
 }
 .page-links {
 	clear: both;
