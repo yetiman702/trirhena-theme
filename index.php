@@ -43,5 +43,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php if((is_archive() || is_single()) && !is_page()) get_sidebar(); ?>
+<?php if((is_archive() || is_single()) AND !is_page()) get_sidebar(); ?>
 <?php get_footer(); ?>
