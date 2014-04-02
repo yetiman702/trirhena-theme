@@ -1,0 +1,355 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: trirhena-theme v1.0-wpcom\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-04-02 21:10:44+0000\n"
+"Last-Translator: scutze <moritz.hoffmann@trirhena-consulting.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:15
+#@ trirhena_theme
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+#@ trirhena_theme
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#: 404.php:27
+#@ trirhena_theme
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:44
+#, php-format
+#@ trirhena_theme
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:27
+#, php-format
+#@ trirhena_theme
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:30
+#, php-format
+#@ trirhena_theme
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:33
+#, php-format
+#@ trirhena_theme
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:33
+#@ trirhena_theme
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:36
+#, php-format
+#@ trirhena_theme
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:36
+#@ trirhena_theme
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:39
+#@ trirhena_theme
+msgid "Asides"
+msgstr ""
+
+#: archive.php:42
+#@ trirhena_theme
+msgid "Galleries"
+msgstr ""
+
+#: archive.php:45
+#@ trirhena_theme
+msgid "Images"
+msgstr ""
+
+#: archive.php:48
+#@ trirhena_theme
+msgid "Videos"
+msgstr ""
+
+#: archive.php:51
+#@ trirhena_theme
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:54
+#@ trirhena_theme
+msgid "Links"
+msgstr ""
+
+#: archive.php:57
+#@ trirhena_theme
+msgid "Statuses"
+msgstr ""
+
+#: archive.php:60
+#@ trirhena_theme
+msgid "Audios"
+msgstr ""
+
+#: archive.php:63
+#@ trirhena_theme
+msgid "Chats"
+msgstr ""
+
+#: archive.php:66
+#: sidebar.php:16
+#@ trirhena_theme
+msgid "Archives"
+msgstr ""
+
+#: comments.php:28
+#, php-format
+#@ trirhena_theme
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:35
+#: comments.php:52
+#@ trirhena_theme
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:36
+#: comments.php:53
+#@ trirhena_theme
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:37
+#: comments.php:54
+#@ trirhena_theme
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:64
+#@ trirhena_theme
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:70
+#@ trirhena_theme
+msgid "Your e-mail address will not be published."
+msgstr "Ihre E-Mail-Adresse wird nicht veröffentlicht."
+
+#: content-none.php:13
+#@ trirhena_theme
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:19
+#, php-format
+#@ trirhena_theme
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: content-none.php:23
+#@ trirhena_theme
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: content-none.php:28
+#@ trirhena_theme
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: content-page.php:18
+#: content-single.php:16
+#: content.php:27
+#@ trirhena_theme
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:23
+#@ trirhena_theme
+msgid "Edit"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: content-single.php:25
+#: content-single.php:28
+#: content.php:38
+#: content.php:48
+#@ trirhena_theme
+msgid ", "
+msgstr ""
+
+#: content-single.php:33
+#, php-format
+#@ trirhena_theme
+msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content-single.php:35
+#, php-format
+#@ trirhena_theme
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content-single.php:41
+#, php-format
+#@ trirhena_theme
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content-single.php:43
+#, php-format
+#@ trirhena_theme
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: content.php:24
+#@ trirhena_theme
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content.php:42
+#, php-format
+#@ trirhena_theme
+msgid "Posted in %1$s"
+msgstr ""
+
+#: content.php:52
+#, php-format
+#@ trirhena_theme
+msgid "Tagged %1$s"
+msgstr ""
+
+#: content.php:58
+#@ trirhena_theme
+msgid "Leave a comment"
+msgstr ""
+
+#: content.php:58
+#@ trirhena_theme
+msgid "1 Comment"
+msgstr ""
+
+#: content.php:58
+#@ trirhena_theme
+msgid "% Comments"
+msgstr ""
+
+#: footer.php:15
+#, php-format
+#@ trirhena_theme
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:17
+#, php-format
+#@ trirhena_theme
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:46
+#@ trirhena_theme
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:71
+#@ trirhena_theme
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:38
+#@ trirhena_theme
+msgid "Menu"
+msgstr ""
+
+#: header.php:39
+#@ trirhena_theme
+msgid "Skip to content"
+msgstr ""
+
+#: inc/extras.php:65
+#, php-format
+#@ trirhena_theme
+msgid "Page %s"
+msgstr ""
+
+#: inc/template-tags.php:23
+#@ trirhena_theme
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:27
+#@ trirhena_theme
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: inc/template-tags.php:31
+#@ trirhena_theme
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:56
+#@ trirhena_theme
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:59
+#, php-format
+#@ trirhena_theme
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: inc/template-tags.php:60
+#, php-format
+#@ trirhena_theme
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:85
+#, php-format
+#@ trirhena_theme
+msgid "<span class=\"posted-on\">%1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr ""
+
+#: search.php:16
+#, php-format
+#@ trirhena_theme
+msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar.php:23
+#@ trirhena_theme
+msgid "Meta"
+msgstr ""
+

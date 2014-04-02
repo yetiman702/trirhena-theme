@@ -64,10 +64,32 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'trirhena_theme' ); ?></p>
 	<?php endif; ?>
 
-	<?php 
+	<?php
+		// Preset variables
+		$commenter = wp_get_current_commenter();
+		$req = get_option( 'require_name_email' );
+		$aria_req = ( $req ? " aria-required='true'" : '' );
+		// Style the fields for the comment form
+		$fields =  array(
+
+		  'author' =>
+		    '<p class="comment-form-author"><label for="author">' . __( 'Name', 'trirhena_theme' ) . '</label> ' .
+		    '<img src="'.get_template_directory_uri() . '/img/icons/user.png'.'" class="input-icon" />'.
+		    '<input id="author" name="author" type="text" placeholder="Name' .( $req ? '*' : '' ).'" value="' . esc_attr( $commenter['comment_author'] ) .
+		    '" size="30"' . $aria_req . ' /></p>',
+
+		  'email' =>
+		    '<p class="comment-form-email"><label for="email">' . __( 'Email', 'trirhena_theme' ).'</label> ' .
+		    '<img src="'.get_template_directory_uri() . '/img/icons/mail.png'.'" class="input-icon" />'.
+		    '<input id="email" name="email" type="text" placeholder="E-Mail '.__('(not published)', 'trirhena_theme').( $req ? '*' : '' ).'" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+		    '" size="30"' . $aria_req . ' /> </p>'
+		);
+
 		comment_form(
 			$args = Array(
-				'comment_notes_before'	=> __('Your e-mail address will not be published.')
+				'comment_notes_before'	=> '',
+				'title_reply'			=> __('Discussion', 'trirhena_theme'),
+				'fields'				=> $fields
 			)
 		); 
 	?>

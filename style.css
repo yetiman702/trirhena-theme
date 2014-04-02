@@ -210,7 +210,7 @@ blockquote {
 	font-style: italic;
 	font-family: georgia, times, serif;
 	background: #eeeeee;
-	border-left: 2px solid #aaaaaa;
+	border-left: 3px solid #aaaaaa;
 	margin: 2em;
 	padding: 2em 2.5em 2em 4em;
 }
@@ -377,6 +377,7 @@ div#claim {
 	
 div#content {
 	position: relative;
+	margin-top: 40px;
 	width:100%;
 	min-width: 800px;
 	display: block;
@@ -892,8 +893,53 @@ img.edit-link {
 	display: inline;
 	height: 20px;
 }
-h3.reply-title {
-	/* font-size:; */
+#main h3 {
+	font-size: 18pt;
+}
+
+#respond label {
+	display: none;
+	position: absolute;
+	color: #909090;
+	padding-left: .5em;
+	font-size:8pt;
+}
+#respond label:after {
+	content: ": ";
+}
+#respond input[type="text"],
+#respond textarea,
+#respond input[type="email"],
+#respond input[type="url"] {
+	width: 300px;
+	right: 0px;
+	font-size: 10pt;
+	border-radius: 0px;
+	border: 3px solid #cccccc;
+	margin: 10px 0;
+	/* Size of the image */
+	padding-left: 30px;
+}
+#respond textarea {
+	width: 62%;
+	padding-left: 0px;
+}
+
+img.input-icon {
+	position: absolute;
+	margin: 15px 0 0 6px;
+	height: 20px;
+}
+
+#respond input[type="text"]:active, 
+#respond input[type="text"]:focus,
+#respond textarea:active,
+#respond textarea:focus,
+#respond input[type="email"]:active, 
+#respond input[type="email"]:focus,
+#respond input[type="url"]:active,
+#respond input[type="url"]:focus {
+	border-color: #909090;
 }
 
 /*--------------------------------------------------------------
