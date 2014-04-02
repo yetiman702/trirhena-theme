@@ -381,10 +381,12 @@ div#content {
 
 #primary 
 {
-	width: 62%;
 	float: left;
 }
-
+#primary.twocolumn
+{
+	width: 62%;
+}
 #secondary
 {
 	width: 37%;
