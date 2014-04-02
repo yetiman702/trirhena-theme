@@ -526,11 +526,18 @@ a.big:hover, #sub a:hover {
 .entry-title a {
 	text-decoration: none;
 }
+a.time {
+	color: #909090;
+	text-decoration: none;
+}
+
 #sub a
 {
 	color: #999999;
 	text-decoration: none;
 }
+
+
 
 
 /*--------------------------------------------------------------
@@ -806,6 +813,11 @@ nav#sub {
 .updated {
 	display: none;
 }
+.published {
+	font-style: italic;
+	font-size:80%;
+}
+
 .single .byline,
 .group-blog .byline {
 	display: inline;
