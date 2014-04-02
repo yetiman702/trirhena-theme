@@ -198,7 +198,6 @@ h2 {
 	padding: .5em 0;
 }
 p {
-	margin-bottom: 1.5em;
 	text-align: justify;
 }
 b, strong {
@@ -213,7 +212,7 @@ blockquote {
 	background: #eeeeee;
 	border-left: 2px solid #aaaaaa;
 	margin: 2em;
-	padding: 2em 2.5em .3em 4em;
+	padding: 2em 2.5em 2em 4em;
 }
 address {
 	margin: 0 0 1.5em;
@@ -541,7 +540,7 @@ a.big {
 	font-family: dejavu;
 	font-size: 26pt;
 }
-a.big:hover, #sub a:hover {
+a.gray:hover, .edit-link a:hover, .foot-menu a:hover {
 	color: #858585;
 }
 .entry-title a {
@@ -552,13 +551,10 @@ a.time {
 	text-decoration: none;
 }
 
-#sub a
-{
+.edit-link a, .foot-menu a, a.gray {
 	color: #999999;
 	text-decoration: none;
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -847,23 +843,40 @@ nav#sub {
 .entry-content,
 .entry-summary {
 }
-.entry-content h2, .entry-header h1 {
-	clear: none;
+.entry-title {
+	font-family: dejavu, verdana, sans-serif;
+	font-size:28pt;
+}
+h1.entry-title {
+	padding-top: 1.5em;
 }
 .entry-content p, .entry-content blockquote {
-	float:left;
+}
+.entry-content h2 {
+	clear: none;
+	margin-top: 1em;
 }
 .entry-content img {
+	padding: 2em;
+}
+.entry-content blockquote {
+	overflow: auto;
+	clear:none;
 }
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+div.edit-link {
+	display: block;
+	float:right;
+	height: 20px;
+	line-height: 20px;
+}
 
-.entry-title {
-	font-family:dejavu, verdana, sans-serif;
-	font-size:28pt;
-	padding: 2em 0 1em 0;
+img.edit-link {
+	display: inline;
+	height: 20px;
 }
 
 /*--------------------------------------------------------------
