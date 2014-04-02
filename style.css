@@ -501,6 +501,7 @@ a:hover,
 a:focus,
 a:active {
 	text-decoration:underline;
+	color: #858585;
 	outline: 0;
 }
 a:focus {
@@ -511,15 +512,26 @@ a.nolink {
 		text-decoration: none;
 }
 
-a.nolink:hover, a.nolink:active, a.nolink.visited{
+a.nolink:hover, a.nolink:active, a.nolink.visited {
 	color: inherit;
 	text-decoration: none;
 }
-a.big
-{
+a.big {
 	font-family: dejavu;
 	font-size: 26pt;
 }
+a.big:hover, #sub a:hover {
+	color: #858585;
+}
+.entry-title a {
+	text-decoration: none;
+}
+#sub a
+{
+	color: #999999;
+	text-decoration: none;
+}
+
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -650,13 +662,6 @@ nav#sub {
 	background: linear-gradient(to bottom,  #cccccc 0%,#ffffff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
-
-#sub a
-{
-	color: #999999;
-	text-decoration: none;
-}
-
 
 /*--------------------------------------------------------------
 6.0 Accessibility

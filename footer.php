@@ -21,7 +21,7 @@
 <nav id="sub" class="opacity-bg">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="big">www.trirhena-consulting.de</a><br>
 	<!-- Funktioniert noch nicht! -->
-	Impressum | Kontakt | Admin | Copyright | Kontakt
+	<a href="">Impressum</a> | <a href="">Kontakt</a> | <a href="">Admin</a> | <a href="">Copyright</a> | <a href="">Kontakt</a>
 </nav>
 
 <?php wp_footer(); ?>
