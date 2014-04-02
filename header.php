@@ -45,7 +45,7 @@ error_reporting(E_ALL);
 								   'theme_location' => 'primary',
 								   'container_class' => 'menu',
 								   'fallback_cb' => 'wp_page_menu'
-							 ) 
+							 )
 				);
 			?>
 		</nav><!-- #site-navigation -->
