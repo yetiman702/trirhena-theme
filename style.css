@@ -119,26 +119,6 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
-a:focus {
-	outline: thin dotted;
-}
-a:hover,
-a:active {
-	outline: 0;
-}
-a img {
-	border: 0;
-}
-
-a.nolink:hover, a.nolink:active, a.nolink.visited{
-	color: inherit;
-	text-decoration: none;
-}
-
-/* Headline sizes */
-h1 {
-	font-size: 28pt;
-}
 
 /* Opacity-Definitions */
 .opacity {   
@@ -512,14 +492,29 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color:#f49800;
-	text-decoration:none;
+	/* text-decoration:none; */
+}
+a img {
+	border: 0;
 }
 a:hover,
 a:focus,
 a:active {
 	text-decoration:underline;
+	outline: 0;
+}
+a:focus {
+	outline: thin dotted;
 }
 
+a.nolink {
+		text-decoration: none;
+}
+
+a.nolink:hover, a.nolink:active, a.nolink.visited{
+	color: inherit;
+	text-decoration: none;
+}
 a.big
 {
 	font-family: dejavu;
@@ -822,8 +817,8 @@ nav#sub {
 
 .entry-title {
 	font-family:dejavu, verdana, sans-serif;
-	font-size:140%;
-	padding: 3em 0 1em 0;
+	font-size:28pt;
+	padding: 2em 0 1em 0;
 }
 
 /*--------------------------------------------------------------
