@@ -329,6 +329,7 @@ th {
 	padding-top: 20px;
 	height: 76px;
 	width: 100%;
+	z-index: 99;
 
 	/* Fonts */
 	font-size:120%;
@@ -348,6 +349,7 @@ th {
 	height: 76px;
 	bottom: 0px;
 	overflow:visible;
+	z-index: 98;
 }
 
 /* Der Bla Bla Bla-Text in der Mitte */
