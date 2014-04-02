@@ -64,6 +64,7 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'trirhena_theme' ); ?></p>
 	<?php endif; ?>
 
+	
 	<?php comment_form(); ?>
 
 </div><!-- #comments -->
