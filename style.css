@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: dejavu;
 }
 h2 {
-	font-size: 180%;
+	font-size: 22pt;
 	padding: .5em 0;
 }
 p {
@@ -393,6 +393,11 @@ div#content {
 #primary.twocolumn {
 	width: 62%;
 }
+/* Set padding equally */
+.onecolumn, .twocolumn {
+	padding: 0 8%;
+}
+
 #secondary {
 	width: 37%;
 	float: left;
@@ -820,7 +825,8 @@ nav#sub {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .site-main {
-	padding: 1em 8%;
+	padding: 1em 0;
+	line-height: 180%;
 }
 
 .sticky {
@@ -845,18 +851,21 @@ nav#sub {
 .entry-content,
 .entry-summary {
 }
+.entry-header {
+	line-height: 1;
+}
 .entry-title {
 	font-family: dejavu, verdana, sans-serif;
-	font-size:28pt;
 }
-h1.entry-title {
-	padding-top: 1.5em;
+#content h1, #content h2 {
+	font-size:28pt;
+	padding: 1.2em 0 1em 0;
 }
 .entry-content p, .entry-content blockquote {
 }
 .entry-content h2 {
 	clear: none;
-	margin-top: 1em;
+	padding: 1em 0;
 }
 .entry-content img {
 	padding: 2em;
@@ -881,6 +890,9 @@ div.edit-link {
 img.edit-link {
 	display: inline;
 	height: 20px;
+}
+h3.reply-title {
+	/* font-size:; */
 }
 
 /*--------------------------------------------------------------
