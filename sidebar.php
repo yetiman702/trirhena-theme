@@ -29,4 +29,15 @@
 			</aside>
 
 		<?php endif; // end sidebar widget area ?>
+		<?php 
+			if( is_single() )
+			{
+				// output author avatar and description
+			}
+			// Add support for 2-clock social media widget
+			if(function_exists('get_twoclick_buttons')) 
+			{
+				get_twoclick_buttons(get_the_ID());
+			}
+		?>
 	</div><!-- #secondary -->

@@ -14,7 +14,7 @@ error_reporting(e_all);
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area onecolumn">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -43,5 +43,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php if((is_archive() || is_single()) && !is_page()) get_sidebar(); ?>
 <?php get_footer(); ?>

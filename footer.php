@@ -19,8 +19,9 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <nav id="sub" class="opacity-bg">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="big">www.trirhena-consulting.de</a><br>
 	<!-- Funktioniert noch nicht! -->
-	<div class="align-right">Impressum | Kontakt | Admin &nbsp;&nbsp;</div>
+	Impressum | Kontakt | Admin | Copyright | Kontakt
 </nav>
 
 <?php wp_footer(); ?>

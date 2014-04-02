@@ -119,21 +119,6 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
-a:focus {
-	outline: thin dotted;
-}
-a:hover,
-a:active {
-	outline: 0;
-}
-a img {
-	border: 0;
-}
-
-a.nolink:hover, a.nolink:active, a.nolink.visited{
-	color: inherit;
-	text-decoration: none;
-}
 
 /* Opacity-Definitions */
 .opacity {   
@@ -198,6 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
 	margin-bottom: 1.5em;
+	text-align: justify;
 }
 b, strong {
 	font-weight: bold;
@@ -207,6 +193,7 @@ dfn, cite, em, i {
 }
 blockquote {
 	margin: 0 1.5em;
+	font-style: italic;
 }
 address {
 	margin: 0 0 1.5em;
@@ -375,16 +362,18 @@ div#content {
 	display:none;
 }
 
-#primary 
-{
-	width: 62%;
+#primary {
 	float: left;
 }
-
-#secondary
-{
+#primary.twocolumn {
+	width: 62%;
+}
+#secondary {
 	width: 37%;
 	float: left;
+	padding: 2em 2em 2em 4em;
+	margin-top: 2em;
+	border-left: 1px solid #e5e5e5;
 }
 
 /*--------------------------------------------------------------
@@ -500,12 +489,33 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color:#f49800;
-	text-decoration:none;
+	/* text-decoration:none; */
+}
+a img {
+	border: 0;
 }
 a:hover,
 a:focus,
 a:active {
 	text-decoration:underline;
+	outline: 0;
+}
+a:focus {
+	outline: thin dotted;
+}
+
+a.nolink {
+		text-decoration: none;
+}
+
+a.nolink:hover, a.nolink:active, a.nolink.visited{
+	color: inherit;
+	text-decoration: none;
+}
+a.big
+{
+	font-family: dejavu;
+	font-size: 26pt;
 }
 
 /*--------------------------------------------------------------
@@ -614,16 +624,36 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 }
 /* Die Subnav mit Admin / Impressum etc */
 nav#sub {
-	position:fixed; bottom:2px; left:0;
+	position: relative;
+	display: block;
+	height: 200px;
+	background: #f5f5f5;
 	z-index:99;
 	overflow:visible;
 	width:100%;
 	min-width:800px;
-	height:1.4em;
-	padding:2px 0;
-	
-	font-size:.7em;
+	padding:70px 0 0 0;
+	text-align: center;
+	border-top: 1px solid #bfbfbf;
+	color: #999999;
+	font-size:70%;
+	/* Gradient */
+	background: #cccccc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cccccc 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cccccc 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
+
+#sub a
+{
+	color: #999999;
+	text-decoration: none;
+}
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -719,6 +749,10 @@ nav#sub {
 	display: none;
 }
 
+.widget-title
+{
+}
+
 /*--------------------------------------------------------------
 9.1 Tags
 --------------------------------------------------------------*/
@@ -780,8 +814,8 @@ nav#sub {
 
 .entry-title {
 	font-family:dejavu, verdana, sans-serif;
-	font-size:140%;
-	padding: 3em 0 1em 0;
+	font-size:28pt;
+	padding: 2em 0 1em 0;
 }
 
 /*--------------------------------------------------------------
@@ -790,6 +824,16 @@ nav#sub {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+aside ul
+{
+	list-style: none;
+}
+
+aside ul li:before
+{
+	content: "\00BB\00A0";
 }
 
 /*--------------------------------------------------------------
