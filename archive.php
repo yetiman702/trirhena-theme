@@ -9,14 +9,14 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area twocolumn">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php
+					<?php 
 						if ( is_category() ) :
 							single_cat_title();
 
@@ -65,7 +65,7 @@ get_header(); ?>
 						else :
 							_e( 'Archives', 'trirhena_theme' );
 
-						endif;
+						endif; 
 					?>
 				</h1>
 				<?php
