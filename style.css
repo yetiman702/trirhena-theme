@@ -135,6 +135,11 @@ a.nolink:hover, a.nolink:active, a.nolink.visited{
 	text-decoration: none;
 }
 
+/* Headline sizes */
+h1 {
+	font-size: 28pt;
+}
+
 /* Opacity-Definitions */
 .opacity {   
   -khtml-opacity: 0.8 /* very old versions of Mozilla Firefox */
@@ -198,6 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
 	margin-bottom: 1.5em;
+	text-align: justify;
 }
 b, strong {
 	font-weight: bold;
@@ -379,16 +385,13 @@ div#content {
 	display:none;
 }
 
-#primary 
-{
+#primary {
 	float: left;
 }
-#primary.twocolumn
-{
+#primary.twocolumn {
 	width: 62%;
 }
-#secondary
-{
+#secondary {
 	width: 37%;
 	float: left;
 	padding: 2em 2em 2em 4em;
@@ -517,6 +520,12 @@ a:active {
 	text-decoration:underline;
 }
 
+a.big
+{
+	font-family: dejavu;
+	font-size: 26pt;
+}
+
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
@@ -623,16 +632,36 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 }
 /* Die Subnav mit Admin / Impressum etc */
 nav#sub {
-	position:fixed; bottom:2px; left:0;
+	position: relative;
+	display: block;
+	height: 200px;
+	background: #f5f5f5;
 	z-index:99;
 	overflow:visible;
 	width:100%;
 	min-width:800px;
-	height:1.4em;
-	padding:2px 0;
-	
-	font-size:.7em;
+	padding:70px 0 0 0;
+	text-align: center;
+	border-top: 1px solid #bfbfbf;
+	color: #999999;
+	font-size:70%;
+	/* Gradient */
+	background: #cccccc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cccccc 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #cccccc 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
+
+#sub a
+{
+	color: #999999;
+	text-decoration: none;
+}
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility

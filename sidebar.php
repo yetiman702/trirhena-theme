@@ -40,7 +40,4 @@
 				get_twoclick_buttons(get_the_ID());
 			}
 		?>
-		<?php 
-
-		?>
 	</div><!-- #secondary -->
