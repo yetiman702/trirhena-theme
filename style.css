@@ -375,6 +375,8 @@ div#claim {
 	
 div#content {
 	position: relative;
+	width:100%;
+	min-width: 800px;
 	display: block;
 	background: white;
 	color: #444444;
@@ -818,7 +820,7 @@ nav#sub {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .site-main {
-	padding:1em 3em;
+	padding: 1em 8%;
 }
 
 .sticky {
@@ -869,9 +871,11 @@ h1.entry-title {
 }
 div.edit-link {
 	display: block;
-	float:right;
+	float: right;
+}
+.edit-link a {
 	height: 20px;
-	line-height: 20px;
+	line-height: 10px;
 }
 
 img.edit-link {

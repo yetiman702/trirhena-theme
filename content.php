@@ -58,6 +58,6 @@
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'trirhena_theme' ), __( '1 Comment', 'trirhena_theme' ), __( '% Comments', 'trirhena_theme' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( '<img src="'.get_template_directory_uri().'/img/gear.png" class="edit-link"> Edit', 'trirhena_theme' ), '<div class="edit-link">', '</div>' ); ?>
+		<?php edit_post_link( __( '<img src="'.get_template_directory_uri().'/img/gear.png" class="edit-link">'.__('Edit' , 'trirhena_theme'), 'trirhena_theme' ), '<div class="edit-link">', '</div>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
