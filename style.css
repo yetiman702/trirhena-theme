@@ -388,6 +388,9 @@ div#content {
 {
 	width: 37%;
 	float: left;
+	padding: 2em 2em 2em 4em;
+	margin-top: 2em;
+	border-left: 1px solid #e5e5e5;
 }
 
 /*--------------------------------------------------------------
@@ -722,6 +725,10 @@ nav#sub {
 	display: none;
 }
 
+.widget-title
+{
+}
+
 /*--------------------------------------------------------------
 9.1 Tags
 --------------------------------------------------------------*/
@@ -793,6 +800,16 @@ nav#sub {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+aside ul
+{
+	list-style: none;
+}
+
+aside ul li:before
+{
+	content: "\00BB\00A0";
 }
 
 /*--------------------------------------------------------------
