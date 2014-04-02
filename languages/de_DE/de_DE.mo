@@ -122,7 +122,7 @@ msgstr ""
 
 #: comments.php:70
 msgid "Your e-mail address will not be published."
-msgstr ""
+msgstr "Ihre E-Mail-Adresse wird nicht veröffentlicht."
 
 #: content-none.php:13
 msgid "Nothing Found"
