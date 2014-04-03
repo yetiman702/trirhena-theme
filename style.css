@@ -391,6 +391,7 @@ div#content {
 
 #primary {
 	float: left;
+	width:100%;
 }
 #primary.twocolumn {
 	width: 62%;
@@ -896,7 +897,9 @@ img.edit-link {
 #main h3 {
 	font-size: 18pt;
 }
-
+/*--------------------------------------------------------------
+10.2 Comments
+--------------------------------------------------------------*/
 #respond label {
 	display: none;
 	position: absolute;
@@ -940,6 +943,10 @@ img.input-icon {
 #respond input[type="url"]:active,
 #respond input[type="url"]:focus {
 	border-color: #909090;
+}
+
+div.comment-author {
+	border-bottom: 3px solid #999999;
 }
 
 /*--------------------------------------------------------------
