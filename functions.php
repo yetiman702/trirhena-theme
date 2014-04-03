@@ -5,6 +5,7 @@
  * @package trirhena_theme
  */
 
+load_theme_textdomain( 'trirhena_theme', TEMPLATEPATH . '/languages' );
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -94,6 +95,16 @@ function trirhena_theme_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'trirhena_theme_scripts' );
+
+/* Set default behavior to not link images to themselves */
+function wpb_imagelink_setup() {
+	$image_set = get_option( 'image_default_link_type' );
+	
+	if ($image_set !== 'none') {
+		update_option('image_default_link_type', 'none');
+	}
+}
+add_action('admin_init', 'wpb_imagelink_setup', 10);
 
 /**
  * Implement the Custom Header feature.

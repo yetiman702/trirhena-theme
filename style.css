@@ -122,7 +122,7 @@ blockquote:before {
 	font-size: 80px;
 	content: "\201C";
 	position: absolute;
-	margin-top:-40px;
+	margin-top: 10px;
 	margin-left: -35px;
 	font-family: georgia, times, serif;
 }
@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: dejavu;
 }
 h2 {
-	font-size: 180%;
+	font-size: 22pt;
 	padding: .5em 0;
 }
 p {
@@ -210,7 +210,7 @@ blockquote {
 	font-style: italic;
 	font-family: georgia, times, serif;
 	background: #eeeeee;
-	border-left: 2px solid #aaaaaa;
+	border-left: 3px solid #aaaaaa;
 	margin: 2em;
 	padding: 2em 2.5em 2em 4em;
 }
@@ -377,12 +377,12 @@ div#claim {
 	
 div#content {
 	position: relative;
+	margin-top: 40px;
 	width:100%;
 	min-width: 800px;
 	display: block;
 	background: white;
 	color: #444444;
-	border-top: 3px solid #f1a656;
 }
 
 #colophon {
@@ -395,6 +395,11 @@ div#content {
 #primary.twocolumn {
 	width: 62%;
 }
+/* Set padding equally */
+.onecolumn, .twocolumn {
+	padding: 0 8%;
+}
+
 #secondary {
 	width: 37%;
 	float: left;
@@ -822,7 +827,8 @@ nav#sub {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .site-main {
-	padding: 1em 8%;
+	padding: 1em 0;
+	line-height: 180%;
 }
 
 .sticky {
@@ -847,18 +853,21 @@ nav#sub {
 .entry-content,
 .entry-summary {
 }
+.entry-header {
+	line-height: 1;
+}
 .entry-title {
 	font-family: dejavu, verdana, sans-serif;
-	font-size:28pt;
 }
-h1.entry-title {
-	padding-top: 1.5em;
+#content h1, #content h2 {
+	font-size:28pt;
+	padding: 1.2em 0 1em 0;
 }
 .entry-content p, .entry-content blockquote {
 }
 .entry-content h2 {
 	clear: none;
-	margin-top: 1em;
+	padding: 1em 0;
 }
 .entry-content img {
 	padding: 2em;
@@ -883,6 +892,54 @@ div.edit-link {
 img.edit-link {
 	display: inline;
 	height: 20px;
+}
+#main h3 {
+	font-size: 18pt;
+}
+
+#respond label {
+	display: none;
+	position: absolute;
+	color: #909090;
+	padding-left: .5em;
+	font-size:8pt;
+}
+#respond label:after {
+	content: ": ";
+}
+#respond input[type="text"],
+#respond textarea,
+#respond input[type="email"],
+#respond input[type="url"] {
+	width: 300px;
+	right: 0px;
+	font-size: 10pt;
+	border-radius: 0px;
+	border: 3px solid #cccccc;
+	margin: 10px 0;
+	/* Size of the image */
+	padding-left: 30px;
+}
+#respond textarea {
+	width: 62%;
+	padding-left: 0px;
+}
+
+img.input-icon {
+	position: absolute;
+	margin: 15px 0 0 6px;
+	height: 20px;
+}
+
+#respond input[type="text"]:active, 
+#respond input[type="text"]:focus,
+#respond textarea:active,
+#respond textarea:focus,
+#respond input[type="email"]:active, 
+#respond input[type="email"]:focus,
+#respond input[type="url"]:active,
+#respond input[type="url"]:focus {
+	border-color: #909090;
 }
 
 /*--------------------------------------------------------------

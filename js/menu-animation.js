@@ -1,5 +1,5 @@
 (function ($) {
-	var padding_anim_range = 150; // range of the nav-menu's padding animation in px
+	var padding_anim_range = 76; // range of the nav-menu's padding animation in px
 
 	$( window ).scroll(function() {
 		var scroll_offset = $( window ).scrollTop();
