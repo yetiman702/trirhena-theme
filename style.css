@@ -314,6 +314,7 @@ th {
 	width:100%; 
 	min-width:800px;
 	overflow: auto;
+	min-height: 76px;
 }
 
 #header-image{
@@ -335,6 +336,15 @@ th {
 	font-size:120%;
 	font-family:dejavu, verdana, sans-serif;
 	line-height:110%;
+	display: none;
+	padding-left: 60px;
+}
+#site-branding.image{
+	padding-left: 120px;
+}
+
+.jsOn #site-branding{
+	display: initial;
 }
 
 #site-branding h2 {
@@ -344,20 +354,29 @@ th {
 
 /* Die Haupt Navigation mit Kacheln auf der Landing page */
 #site-navigation {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 76px;
-	bottom: 0px;
+	top: 0px;
 	overflow:visible;
 	z-index: 98;
+}
+
+#site-navigation.image{
+	padding-left: 120px;
+}
+
+.jsOn #site-navigation {
+	position: absolute;
+	top: inherit;
+	bottom: 0px;
+	padding-left: 0px;
 }
 
 /* Der Bla Bla Bla-Text in der Mitte */
 div#claim {
 	/* space for site-branding */
 	margin-top: 76px;
-	/* space for site-menu */
-	margin-bottom: 76px;
 	width: 100%;
 	/* heigth and padding is changeable for design purposes */
 	min-height: 500px;
@@ -369,6 +388,19 @@ div#claim {
 	color: white;
 	font-size: 5em;
 	font-weight: bold;
+}
+
+.jsOn div#claim{
+	/* space for site-menu */
+	margin-bottom: 76px;
+}
+
+div#claim.non_landing_page{
+	display: none;
+}
+
+.jsOn div#claim.non_landing_page{
+	display: block;
 }
 
 #claim h1 {
@@ -407,6 +439,13 @@ div#content {
 	padding: 2em 2em 2em 4em;
 	margin-top: 2em;
 	border-left: 1px solid #e5e5e5;
+}
+
+.onlyWithScript {
+	display: none;
+}
+.jsOn .onlyWithScript{
+	display: block;
 }
 
 /*--------------------------------------------------------------

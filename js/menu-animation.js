@@ -17,15 +17,17 @@
 		else if(branding.css("position") == "absolute" && scroll_offset < branding.offset().top) {
 			branding.css({"position": "fixed", "bottom": ""});
 		}
-		if(scroll_offset < nav_menu.offset().top - padding_anim_range) {
-			nav_menu.css("padding-left", 0);
-		}
-		else if(scroll_offset > nav_menu.offset().top){
-			nav_menu.css("padding-left", parseInt($( "#site-branding" ).css("padding-left")));
-		}
-		else{
-			var factor = (scroll_offset - nav_menu.offset().top + padding_anim_range) / padding_anim_range;
-			nav_menu.css("padding-left", factor * parseInt($( "#site-branding" ).css("padding-left")));
+		if(nav_menu.hasClass("image")){
+			if(scroll_offset < nav_menu.offset().top - padding_anim_range) {
+				nav_menu.css("padding-left", 0);
+			}
+			else if(scroll_offset > nav_menu.offset().top){
+				nav_menu.css("padding-left", parseInt($( "#site-branding" ).css("padding-left")));
+			}
+			else{
+				var factor = (scroll_offset - nav_menu.offset().top + padding_anim_range) / padding_anim_range;
+				nav_menu.css("padding-left", factor * parseInt($( "#site-branding" ).css("padding-left")));
+			}
 		}
 	});
 }(jQuery));

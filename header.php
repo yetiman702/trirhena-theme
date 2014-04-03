@@ -15,14 +15,19 @@ error_reporting(E_ALL);
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<!-- Hack for only with script elements http://rickyrosario.com/blog/the-opposite-of-the-noscript-element-yesscript-scriptonly/ -->
+<script type="text/javascript">
+//<![CDATA[
+	document.getElementsByTagName('html')[0].className='jsOn';
+//]]>
+</script>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-branding">
-		<div id="site-branding" class="opacity-bg" style="padding-left:<?php echo((get_header_image())? 120 : 60); ?>px;">
+		<div id="site-branding" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" >
 			<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nolink" style="color: #<?php header_textcolor(); ?>;"><?php bloginfo( 'name' ); ?></a>
 			</h1>
@@ -32,9 +37,9 @@ error_reporting(E_ALL);
 		</div>
 
 		<!-- hier die Slideshow hin -->
-		<div id="claim"><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
+		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
 
-		<nav id="site-navigation" class="opacity-bg" role="navigation">
+		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
 			<?php
