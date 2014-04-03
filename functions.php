@@ -92,6 +92,10 @@ function trirhena_theme_scripts() {
 
 	wp_enqueue_script( 'trirhena_theme_jump_to_content', get_template_directory_uri() .  '/js/jump_to_content.js', array('jquery'));
 
+	if( ! trirhena_theme_is_landing_page() ){
+		wp_enqueue_script( 'trirhena_theme_show_content_on_load', get_template_directory_uri() .  '/js/show_content_on_load.js', array('jquery'));
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
