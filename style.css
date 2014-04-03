@@ -308,6 +308,12 @@ th {
 /*--------------------------------------------------------------
 3.2.1 Top-Level Layout Elements
 --------------------------------------------------------------*/
+body, html {
+  height:100%;
+}
+#page {
+	height:100%;
+}
 /* Die Leiste mit Logo ganz oben */
 #masthead{
 	position: relative;
@@ -409,12 +415,16 @@ div#claim.non_landing_page{
 	
 div#content {
 	position: relative;
+	float:left;
 	margin-top: 40px;
 	width:100%;
+	min-height: 100%;
+	/* min-height: 100vh; */
 	min-width: 800px;
 	display: block;
 	background: white;
 	color: #444444;
+	padding-bottom: 5em;
 }
 
 #colophon {
@@ -712,11 +722,14 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 }
 /* Die Subnav mit Admin / Impressum etc */
 nav#sub {
+	/* idealerweise absolute mit bottom 0 */
 	position: relative;
+	float:left;
+	clear:both;
 	display: block;
-	height: 200px;
+	min-height: 200px;
 	background: #f5f5f5;
-	z-index:99;
+	z-index:-1;
 	overflow:visible;
 	width:100%;
 	min-width:800px;
