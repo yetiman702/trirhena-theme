@@ -89,3 +89,16 @@ function trirhena_theme_setup_author() {
 	}
 }
 add_action( 'wp', 'trirhena_theme_setup_author' );
+
+
+/**
+ * Detects if the current query is for the landing page, i.e. no specific page is queried.
+ *
+ * This is neccesary to make the first site displayed differently when it is queried specifically
+ * to when it is queried as the first site.
+ */
+function trirhena_theme_is_landing_page()
+{
+	preg_match('@^(?:https?://)?[^/]+(.*)@i', esc_url( home_url( '/' ) ), $match);
+	return ($match[1] == $_SERVER["REQUEST_URI"]);
+}
