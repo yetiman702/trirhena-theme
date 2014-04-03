@@ -331,6 +331,7 @@ th {
 	height: 76px;
 	width: 100%;
 	z-index: 99;
+	top: 0px;
 
 	/* Fonts */
 	font-size:120%;
