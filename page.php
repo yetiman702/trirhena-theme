@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<?php if (get_option('show_on_front') != 'page' && !is_front_page()) : ?>
+<?php if (get_option('show_on_front') != 'page' || !is_front_page() ) : ?>
 	<div id="primary" class="content-area onecolumn">
 		<main id="main" class="site-main" role="main">
 
