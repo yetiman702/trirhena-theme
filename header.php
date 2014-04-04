@@ -72,4 +72,4 @@ error_reporting(E_ALL);
 		<?php endif; // End header image check. ?>
 	</header>
 
-	<div id="content" class="site-content" <?php if( trirhena_theme_is_landing_page() ) { echo "style=\"display:none;\""; } ?>>
+	<div id="content" class="site-content">
