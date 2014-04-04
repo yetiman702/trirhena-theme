@@ -88,7 +88,7 @@ if ( post_password_required() ) {
 		comment_form(
 			$args = Array(
 				'comment_notes_before'	=> '',
-				'title_reply'			=> __('Discussion', 'trirhena_theme'),
+				'title_reply'			=> __('Join the discussion', 'trirhena_theme'),
 				'fields'				=> $fields
 			)
 		); 
