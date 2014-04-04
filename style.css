@@ -429,7 +429,9 @@ div#content {
 }
 
 #colophon {
-	display:none;
+	position: relative;
+	float: left;
+	width: 100%;
 }
 
 #primary {
@@ -600,7 +602,7 @@ a.big {
 	font-family: dejavu;
 	font-size: 26pt;
 }
-a.gray:hover, .edit-link a:hover, .foot-menu a:hover {
+a.gray:hover, .edit-link a:hover, .foot-menu a:hover, #sub a {
 	color: #858585;
 }
 .entry-title a {
