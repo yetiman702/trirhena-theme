@@ -38,9 +38,10 @@ error_reporting(E_ALL);
 
 		<!-- hier die Slideshow hin -->
 		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>><h1>&laquo;
-			<?php if(get_option('show_on_front') != 'page') : ?>
-				This Theme is designed for a static front page. Please select one!
-			<?php else :
+			<?php 
+				if(get_option('show_on_front') != 'page') :
+					_e('This Theme is designed for a static front page. Please select one!', 'trirhena_theme');
+				else :
 						echo get_the_title(get_option('page_on_front'));
 				  endif; ?>
 		&raquo;</h1></div>

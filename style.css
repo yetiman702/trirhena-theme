@@ -602,7 +602,7 @@ a.big {
 	font-family: dejavu;
 	font-size: 26pt;
 }
-a.gray:hover, .edit-link a:hover, .foot-menu a:hover, #sub a {
+a.gray:hover, .edit-link a:hover, .foot-menu a:hover, #sub a:hover {
 	color: #858585;
 }
 .entry-title a {
@@ -613,7 +613,7 @@ a.time {
 	text-decoration: none;
 }
 
-.edit-link a, .foot-menu a, a.gray {
+.edit-link a, .foot-menu a, a.gray, #sub a {
 	color: #999999;
 	text-decoration: none;
 }
