@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 			<?php
 				wp_nav_menu( array(
 								   // count only top-level entries
-								   'depth' => 1,
+								   'depth' => -1,
 								   // display here when set to top
 								   'theme_location' => 'primary',
 								   'container_class' => 'menu',

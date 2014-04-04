@@ -172,19 +172,19 @@ class Trirhena_Theme_Nav_Link_Walker extends Walker_Nav_Menu {
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 
-	  /**
-	   * Ends the element output, if needed.
-	   *
-	   * @see Walker::end_el()
-	   *
-	   * @since 3.0.0
-	   *
-	   * @param string $output Passed by reference. Used to append additional content.
-	   * @param object $item   Page data object. Not used.
-	   * @param int    $depth  Depth of page. Not Used.
-	   * @param array  $args   An array of arguments. @see wp_nav_menu()
-	   */
-	  function end_el( &$output, $item, $depth = 0, $args = array() ) {
-	  	$output .= "\n";
-	  }
+		/**
+		* Ends the element output, if needed.
+		*
+		* @see Walker::end_el()
+		*
+		* @since 3.0.0
+		*
+		* @param string $output Passed by reference. Used to append additional content.
+		* @param object $item   Page data object. Not used.
+		* @param int    $depth  Depth of page. Not Used.
+		* @param array  $args   An array of arguments. @see wp_nav_menu()
+		*/
+		function end_el( &$output, $item, $depth = 0, $args = array() ) {
+			$output .= "\n";
+		}
 	}
