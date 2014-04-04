@@ -19,10 +19,21 @@
 	</footer><!-- #colophon -->
 <nav id="sub" class="opacity-bg">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="big gray">www.trirhena-consulting.de</a><br>
-	<!-- Funktioniert noch nicht! -->
+	<?php if(has_nav_menu('footer')) : ?>
 	<span class="foot-menu">
-		<a href="">Impressum</a> | <a href="">Kontakt</a> | <a href="">Admin</a> | <a href="">Copyright</a> | <a href="">Kontakt</a>
+		<?php $links = wp_nav_menu( array( 'theme_location'  => 'footer',
+										   'depth'           => -1,
+										   'echo'            => 0,
+										   'container'       => false,
+										   'walker'          => new Trirhena_Theme_Nav_Link_Walker(),
+										   'items_wrap'      => '%3$s'
+										  )
+								   );
+			  $links_array = array_filter(explode("\n", $links));
+			  echo implode('<span>|</span>', $links_array);
+		?>
 	</span>
+	<?php endif; ?>
 </nav>
 </div><!-- #page -->
 
