@@ -17,7 +17,6 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'trirhena_theme' ), 'trirhena_theme', '<a href="http://trirhena-consulting.de/" rel="designer">TRC</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 <nav id="sub" class="opacity-bg">
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="big gray">www.trirhena-consulting.de</a><br>
 	<!-- Funktioniert noch nicht! -->
@@ -25,6 +24,7 @@
 		<a href="">Impressum</a> | <a href="">Kontakt</a> | <a href="">Admin</a> | <a href="">Copyright</a> | <a href="">Kontakt</a>
 	</span>
 </nav>
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
