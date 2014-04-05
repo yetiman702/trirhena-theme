@@ -314,10 +314,10 @@ body, html {
 #page {
 	height:100%;
 }
-/* Die Leiste mit Logo ganz oben */
 #masthead{
 	position: relative;
-	width:100%; 
+	width:100%;
+	height:100%;
 	overflow: auto;
 	min-height: 76px;
 }
@@ -336,7 +336,6 @@ body, html {
 	height: 76px;
 	width: 100%;
 	z-index: 99;
-
 	/* Fonts */
 	font-size:120%;
 	font-family:dejavu, verdana, sans-serif;
@@ -379,48 +378,40 @@ body, html {
 }
 
 /* Der Bla Bla Bla-Text in der Mitte */
-div#claim {
+#claim {
 	/* space for site-branding */
-	display:block;
 	margin-top: 76px;
+	display: block;
 	width: 100%;
 	/* heigth and padding is changeable for design purposes */
-	height: 450px;
-	padding-top: 100px;
-	padding-bottom: 100px;
 	display: table;
-	text-align: center;
+	text-align: center;	
 	font-family: roboto;
 	color: white;
 	font-size: 5em;
 	font-weight: bold;
+	line-height:1;
 }
-
-/* Make claim position responsive */
-@media screen and (max-height: 600px) {
+/* Make landing page height responsive */ 
+@media screen and (max-height:250px) {
 	div#claim {
-		padding: 70px 0;
-		height: 350px;
-	}
+		display:none;
 }
-@media screen and (max-height: 500px) {
-	div#claim {
-		padding: 50px 0;
-		height: 250px;
-	}
-}
-@media screen and (max-height: 400px) {
-	div#claim {
-		padding: 20px 0;
-		height: 150px;
+@media screen and (min-height: 250px;) {
+	div#claim{
+		display:block;
 	}
 }
 
-@media screen and (max-height: 200px) {
-	div#claim {
-		padding: 10px 0;
-		height: 70px;
-	}
+
+/* prepare website for full responsiveness */
+@media screen and (max-width:320px) {}
+@media screen and (min-width:321px) and (max-width:639px) {}
+@media screen and (min-width:640px) and (max-width:959px) {}
+@media screen and (min-width:960px) and (max-width:1279px) {}
+@media screen and (min-width:1280px) and (max-width:1599px) {}
+@media screen and (min-width:1600px) {}
+@media screen and (min-width:1920px) {}}
 }
 
 .jsOn div#claim{
@@ -722,11 +713,6 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	#site-navigation.toggled .nav-menu {
 		display: block;
 	}
-	/* Make claim smaller on smaller screens */
-	#claim {
-
-	}
-
 	#site-navigation ul {
 		display: none;
 	}
