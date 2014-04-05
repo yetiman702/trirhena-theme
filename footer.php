@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-<nav id="sub" class="opacity-bg">
+<nav id="sub" class="opacity-bg" <?php if ( trirhena_theme_is_landing_page() ) echo "style=\"display:none;\""; ?> >
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="big gray">www.trirhena-consulting.de</a><br>
 	<?php if(has_nav_menu('footer')) : ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">

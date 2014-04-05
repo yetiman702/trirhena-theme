@@ -318,7 +318,6 @@ body, html {
 #masthead{
 	position: relative;
 	width:100%; 
-	min-width:800px;
 	overflow: auto;
 	min-height: 76px;
 }
@@ -386,8 +385,7 @@ div#claim {
 	margin-top: 76px;
 	width: 100%;
 	/* heigth and padding is changeable for design purposes */
-	height: 100%;
-	min-height: 500px;
+	height: 450px;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	display: table;
@@ -396,6 +394,33 @@ div#claim {
 	color: white;
 	font-size: 5em;
 	font-weight: bold;
+}
+
+/* Make claim position responsive */
+@media screen and (max-height: 600px) {
+	div#claim {
+		padding: 70px 0;
+		height: 350px;
+	}
+}
+@media screen and (max-height: 500px) {
+	div#claim {
+		padding: 50px 0;
+		height: 250px;
+	}
+}
+@media screen and (max-height: 400px) {
+	div#claim {
+		padding: 20px 0;
+		height: 150px;
+	}
+}
+
+@media screen and (max-height: 200px) {
+	div#claim {
+		padding: 10px 0;
+		height: 70px;
+	}
 }
 
 .jsOn div#claim{
@@ -421,7 +446,6 @@ div#content {
 	width:100%;
 	/* min-height: 80%; */
 	/* min-height: 100vh; */
-	min-width: 800px;
 	display: block;
 	background: white;
 	color: #444444;
@@ -625,7 +649,7 @@ a.time {
 /* Div um ul mit nav items */
 div.menu {	
 	width:100%;
-	display:table;
+	display: table;
 	table-layout: fixed;
 }
 
@@ -693,10 +717,14 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	cursor: pointer;
 	display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.menu-toggle,
 	#site-navigation.toggled .nav-menu {
 		display: block;
+	}
+	/* Make claim smaller on smaller screens */
+	#claim {
+
 	}
 
 	#site-navigation ul {
@@ -734,7 +762,6 @@ nav#sub {
 	width:100%;
 	height:200px;
 	min-height:20%;
-	min-width:800px;
 	padding:70px 0 0 0;
 	text-align: center;
 	border-top: 1px solid #bfbfbf;
