@@ -37,7 +37,14 @@ error_reporting(E_ALL);
 		</div>
 
 		<!-- hier die Slideshow hin -->
-		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>><h1>&laquo;Bla Bla Bla&raquo;</h1></div>
+		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>><h1>&laquo;
+			<?php 
+				if(get_option('show_on_front') != 'page') :
+					_e('This Theme is designed for a static front page. Please select one!', 'trirhena_theme');
+				else :
+						echo get_the_title(get_option('page_on_front'));
+				  endif; ?>
+		&raquo;</h1></div>
 
 		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
@@ -45,7 +52,7 @@ error_reporting(E_ALL);
 			<?php
 				wp_nav_menu( array(
 								   // count only top-level entries
-								   'depth' => 1,
+								   'depth' => -1,
 								   // display here when set to top
 								   'theme_location' => 'primary',
 								   'container_class' => 'menu',
