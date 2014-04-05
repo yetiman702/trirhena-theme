@@ -419,18 +419,17 @@ div#content {
 	float:left;
 	margin-top: 40px;
 	width:100%;
-	/* min-height: 80%; */
+	min-height: 70%;
 	/* min-height: 100vh; */
 	min-width: 800px;
 	display: block;
 	background: white;
 	color: #444444;
+	padding-bottom: 5em;
 }
 
 #colophon {
-	position: relative;
-	float: left;
-	width: 100%;
+	display:none;
 }
 
 #primary {
@@ -601,7 +600,7 @@ a.big {
 	font-family: dejavu;
 	font-size: 26pt;
 }
-a.gray:hover, .edit-link a:hover, .foot-menu a:hover, #sub a:hover {
+a.gray:hover, .edit-link a:hover, .foot-menu a:hover {
 	color: #858585;
 }
 .entry-title a {
@@ -612,7 +611,7 @@ a.time {
 	text-decoration: none;
 }
 
-.edit-link a, .foot-menu a, a.gray, #sub a {
+.edit-link a, .foot-menu a, a.gray {
 	color: #999999;
 	text-decoration: none;
 }
@@ -749,10 +748,6 @@ nav#sub {
 	background: -ms-linear-gradient(top,  #cccccc 0%,#ffffff 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #cccccc 0%,#ffffff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-}
-
-.foot-menu span{
-	padding: 5px;
 }
 
 /*--------------------------------------------------------------
