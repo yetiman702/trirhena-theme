@@ -404,7 +404,6 @@ body, html {
 @media screen and (max-height:300px) {
 	div#claim {
 		font-size:3em;
-		background: yellow;
 	}
 }
 /* Revert if screen is resized */
@@ -443,7 +442,6 @@ div#claim.non_landing_page {
 div#content {
 	position: relative;
 	float:left;
-	margin-top: 40px;
 	width:100%;
 	/* min-height: 80%; */
 	/* min-height: 100vh; */
