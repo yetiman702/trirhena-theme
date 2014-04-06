@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 </script>
 <?php wp_head(); ?>
 <!-- include fittext plugin (needs to be loaded after jQyuery) -->
-<script src="http://wp1172190.server-he.de/fittext.js"></script>
+<script src="<?php echo get_template_directory_uri() . '/js/fittext.js'; ?>"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -41,14 +41,12 @@ error_reporting(E_ALL);
 		<!-- hier die Slideshow hin -->
 		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>>
 			<h1 class="heading">
-				&laquo;
-				<?php 
+				&laquo;<?php 
 					if(get_option('show_on_front') != 'page') :
 						_e('This Theme is designed for a static front page. Please select one!', 'trirhena_theme');
 					else :
 							echo get_the_title(get_option('page_on_front'));
-					  endif; ?>
-				&raquo;
+					  endif; ?>&raquo;
 			</h1>
 		</div>
 		<!-- inflate punchline -->
