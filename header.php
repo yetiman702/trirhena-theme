@@ -15,6 +15,8 @@ error_reporting(E_ALL);
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!-- include fittext plugin -->
+<script type="text/javascript" src="js/fittext.js"></script>
 <!-- Hack for only with script elements http://rickyrosario.com/blog/the-opposite-of-the-noscript-element-yesscript-scriptonly/ -->
 <script type="text/javascript">
 //<![CDATA[
@@ -37,14 +39,18 @@ error_reporting(E_ALL);
 		</div>
 
 		<!-- hier die Slideshow hin -->
-		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>><h1>&laquo;
-			<?php 
-				if(get_option('show_on_front') != 'page') :
-					_e('This Theme is designed for a static front page. Please select one!', 'trirhena_theme');
-				else :
-						echo get_the_title(get_option('page_on_front'));
-				  endif; ?>
-		&raquo;</h1></div>
+		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>>
+			<h1>
+				&laquo;
+				<?php 
+					if(get_option('show_on_front') != 'page') :
+						_e('This Theme is designed for a static front page. Please select one!', 'trirhena_theme');
+					else :
+							echo get_the_title(get_option('page_on_front'));
+					  endif; ?>
+				&raquo;
+			</h1>
+		</div>
 		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
