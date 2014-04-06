@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 				&raquo;
 			</h1>
 		</div>
-		<!-- include fittext plugin to inflate punchline -->
+		<!-- inflate punchline -->
 		<script type="text/javascript">
 	      jQuery(".heading").fitText();
 	    </script>
