@@ -387,6 +387,7 @@ body, html {
 	display: block;
 	width: 100%;
 	/* heigth and padding is changeable for design purposes */
+	padding:5%;
 	display: table;
 	text-align: center;	
 	font-family: roboto;

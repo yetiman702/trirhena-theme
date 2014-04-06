@@ -51,7 +51,7 @@ error_reporting(E_ALL);
 		</div>
 		<!-- inflate punchline -->
 		<script type="text/javascript">
-	      jQuery(".heading").fitText();
+	      jQuery(".heading").fitText(1.2);
 	    </script>
 		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
