@@ -198,7 +198,7 @@ h2 {
 	padding: .5em 0;
 }
 p {
-	text-align: justify;
+	/* text-align: justify; */
 }
 b, strong {
 	font-weight: bold;
