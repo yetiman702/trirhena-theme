@@ -490,6 +490,21 @@ div#content {
 	display: block;
 }
 
+/* Die anklickbaren Titel */
+.flip-title {
+	border-bottom: 3px solid #999999;
+	cursor: pointer;
+}
+.flip-title:hover {
+	color: #e39000;
+} 
+
+.flip-panel {
+	background: #fafafa;
+	border: 1px solid #e0e0e0;
+	padding: 5%;
+}
+
 /*--------------------------------------------------------------
 3.2.1 Top-Level Styles
 --------------------------------------------------------------*/
@@ -919,7 +934,6 @@ nav#sub {
 	padding: 1em 0;
 	line-height: 180%;
 }
-
 .sticky {
 }
 .hentry {
@@ -985,6 +999,10 @@ img.edit-link {
 #main h3 {
 	font-size: 18pt;
 }
+/* Spoiler */
+
+
+
 /*--------------------------------------------------------------
 10.2 Comments
 --------------------------------------------------------------*/
