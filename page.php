@@ -13,7 +13,7 @@
 get_header(); ?>
 
 <?php if (get_option('show_on_front') != 'page' || !is_front_page() ) : ?>
-	<div id="primary" class="content-area twocolumn">
+	<div id="primary" class="content-area onecolumn">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -33,5 +33,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 <?php endif; ?>
 
-<?php if ( ! trirhena_theme_is_landing_page() ) get_sidebar(); /* sidebar for page display */  ?>
+<?php /* get_sidebar(); // No sidebar for page display */ ?>
 <?php get_footer(); ?>
