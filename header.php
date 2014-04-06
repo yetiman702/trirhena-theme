@@ -15,8 +15,6 @@ error_reporting(E_ALL);
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<!-- include fittext plugin -->
-<script type="text/javascript" src="js/fittext.js"></script>
 <!-- Hack for only with script elements http://rickyrosario.com/blog/the-opposite-of-the-noscript-element-yesscript-scriptonly/ -->
 <script type="text/javascript">
 //<![CDATA[
@@ -24,6 +22,8 @@ error_reporting(E_ALL);
 //]]>
 </script>
 <?php wp_head(); ?>
+<!-- include fittext plugin (needs to be loaded after jQyuery) -->
+<script src="http://wp1172190.server-he.de/fittext.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -40,7 +40,7 @@ error_reporting(E_ALL);
 
 		<!-- hier die Slideshow hin -->
 		<div id="claim" <?php if( ! trirhena_theme_is_landing_page() ){ echo 'class="non_landing_page"'; } ?>>
-			<h1>
+			<h1 class="heading">
 				&laquo;
 				<?php 
 					if(get_option('show_on_front') != 'page') :
@@ -51,6 +51,10 @@ error_reporting(E_ALL);
 				&raquo;
 			</h1>
 		</div>
+		<!-- include fittext plugin to inflate punchline -->
+		<script type="text/javascript">
+	      jQuery(".heading").fitText();
+	    </script>
 		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
@@ -68,7 +72,7 @@ error_reporting(E_ALL);
 		</nav><!-- #site-navigation -->
 
 		<?php if ( get_header_image() ) : ?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home", class="nolink">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nolink">
 			<img src="<?php header_image(); ?>"
 				id="header-image"
 				title="<?php bloginfo( 'name' ); ?> -- <?php bloginfo( 'description' ); ?>"
