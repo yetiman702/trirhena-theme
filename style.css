@@ -452,8 +452,6 @@ div#content {
 	position: relative;
 	float:left;
 	width:100%;
-	/* min-height: 80%; */
-	/* min-height: 100vh; */
 	display: block;
 	background: white;
 	color: #444444;
