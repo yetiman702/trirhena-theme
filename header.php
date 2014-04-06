@@ -45,7 +45,6 @@ error_reporting(E_ALL);
 						echo get_the_title(get_option('page_on_front'));
 				  endif; ?>
 		&raquo;</h1></div>
-
 		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
