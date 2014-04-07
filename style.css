@@ -478,7 +478,7 @@ div#content {
 #secondary {
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:960px) {
 	/* Display columns among themselves */
 	#primary {
 		width: 100%;
@@ -489,16 +489,16 @@ div#content {
 		width: 100%;
 	}
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:960px) {
 	/* Display columns among themselves */
 	#primary {
-		width: 75%;
+		width: 70%;
 	}
 	#secondary {
 		/* Reset border first */
 		border: 0;
 		border-left: 1px solid #e5e5e5;
-		width: 25%;
+		width: 30%;
 	}
 }
 
