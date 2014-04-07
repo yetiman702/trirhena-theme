@@ -455,6 +455,7 @@ div#content {
 	display: block;
 	background: white;
 	color: #444444;
+	overflow:auto;
 }
 
 #colophon {
