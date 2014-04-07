@@ -882,6 +882,7 @@ nav#sub {
 
 .widget-title
 {
+	font-size: 16pt;
 }
 
 /*--------------------------------------------------------------
@@ -949,7 +950,7 @@ nav#sub {
 .entry-title {
 	font-family: dejavu, verdana, sans-serif;
 }
-#content h1, #content h2 {
+#primary h1, #primary h2 {
 	font-size:28pt;
 	padding: 1.2em 0 1em 0;
 }
