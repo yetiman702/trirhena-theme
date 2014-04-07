@@ -349,7 +349,6 @@ body, html {
 }
 @media screen and (max-width: 400px) {
 	#site-branding {
-		width:400px;
 		font-size: 80%;
 	}
 }
@@ -468,8 +467,7 @@ div#content {
 	float: left;
 	width:100%;
 }
-#primary.twocolumn {
-	width: 75%;
+#primary .twocolumn {
 }
 /* Set padding equally */
 .onecolumn, .twocolumn {
@@ -477,11 +475,30 @@ div#content {
 }
 
 #secondary {
-	width: 25%;
+	min-width:200px;
 	float: left;
-	padding: 2em 2em 2em 4em;
+	padding: 0;
 	margin-top: 2em;
 	border-left: 1px solid #e5e5e5;
+}
+
+@media screen and (max-width:768px) {
+	/* Display columns among themselves */
+	#primary {
+		width: 100%;
+	}
+	#secondary {
+		width: 100%;
+	}
+}
+@media screen and (min-width:768px) {
+	/* Display columns among themselves */
+	#primary {
+		width: 75%;
+	}
+	#secondary {
+		width: 25%;
+	}
 }
 
 .onlyWithScript {
