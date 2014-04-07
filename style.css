@@ -985,20 +985,7 @@ img.edit-link {
 #main h3 {
 	font-size: 18pt;
 }
-/* Die anklickbaren Titel */
-.flip-title {
-	border-bottom: 3px solid #999999;
-	cursor: pointer;
-}
-.flip-title:hover {
-	color: #e39000;
-} 
 
-.flip-panel {
-	background: #fafafa;
-	border: 1px solid #e0e0e0;
-	padding: 5%;
-}
 /*--------------------------------------------------------------
 10.2 Comments
 --------------------------------------------------------------*/
