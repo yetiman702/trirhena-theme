@@ -468,17 +468,14 @@ div#content {
 	width:100%;
 }
 #primary, #secondary {
-	padding: 0 8%;
+	padding: 60px;
+	float: left;
 }
 /* Set padding equally */
 .onecolumn, .twocolumn {
 }
 
 #secondary {
-	min-width:200px;
-	float: left;
-	margin-top: 2em;
-	border-left: 1px solid #e5e5e5;
 }
 
 @media screen and (max-width:768px) {
@@ -487,6 +484,8 @@ div#content {
 		width: 100%;
 	}
 	#secondary {
+		/* Reset border */
+		border: 0;
 		width: 100%;
 	}
 }
@@ -496,6 +495,9 @@ div#content {
 		width: 75%;
 	}
 	#secondary {
+		/* Reset border first */
+		border: 0;
+		border-left: 1px solid #e5e5e5;
 		width: 25%;
 	}
 }
@@ -934,14 +936,12 @@ nav#sub {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 .site-main {
-	padding: 1em 0;
 	line-height: 180%;
 }
 
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
 }
 .byline,
 .updated {
@@ -968,7 +968,7 @@ nav#sub {
 }
 #primary h1, #primary h2 {
 	font-size:28pt;
-	padding: 1.2em 0 1em 0;
+	padding: 0 0 1em 0;
 }
 .entry-content p, .entry-content blockquote {
 }
