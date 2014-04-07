@@ -469,7 +469,7 @@ div#content {
 	width:100%;
 }
 #primary.twocolumn {
-	width: 75%;
+	width: 67%;
 }
 /* Set padding equally */
 .onecolumn, .twocolumn {
@@ -477,7 +477,8 @@ div#content {
 }
 
 #secondary {
-	width: 25%;
+	width: 32%;
+	min-width:200px;
 	float: left;
 	padding: 2em 2em 2em 4em;
 	margin-top: 2em;
