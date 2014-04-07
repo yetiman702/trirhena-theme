@@ -68,7 +68,9 @@ error_reporting(E_ALL);
 				);
 			?>
 		</nav><!-- #site-navigation -->
-
+		<script type="text/javascript">
+	      jQuery(".menu-item").fitText(1.2);
+	    </script>
 		<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nolink">
 			<img src="<?php header_image(); ?>"

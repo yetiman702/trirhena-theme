@@ -313,7 +313,6 @@ body, html {
 }
 #page {
 	height:100%;
-	min-width:400px;
 }
 #masthead{
 	position: relative;
