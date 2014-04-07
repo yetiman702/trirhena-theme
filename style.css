@@ -509,13 +509,13 @@ div#content {
 	display: block;
 }
 
-/*--------------------------------------------------------------
-3.2.1 Top-Level Styles
---------------------------------------------------------------*/
 #site-navigation, #site-navigation * {
 	font-family:dejavu;
 }
 
+.avatar {
+	padding:20px;
+}
 /*--------------------------------------------------------------
 4.0 Inputs and buttons
 --------------------------------------------------------------*/
@@ -898,8 +898,9 @@ nav#sub {
 	display: none;
 }
 
-.widget-title
+.widget-title, .twoclick-intro p
 {
+	font-family: dejavu;
 	font-size: 16pt;
 }
 
