@@ -467,17 +467,16 @@ div#content {
 	float: left;
 	width:100%;
 }
-#primary .twocolumn {
+#primary, #secondary {
+	padding: 0 8%;
 }
 /* Set padding equally */
 .onecolumn, .twocolumn {
-	padding: 0 8%;
 }
 
 #secondary {
 	min-width:200px;
 	float: left;
-	padding: 0;
 	margin-top: 2em;
 	border-left: 1px solid #e5e5e5;
 }
