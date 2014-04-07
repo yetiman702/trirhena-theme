@@ -313,7 +313,6 @@ body, html {
 }
 #page {
 	height:100%;
-	min-width:400px;
 }
 #masthead{
 	position: relative;
@@ -420,7 +419,6 @@ body, html {
 		font-size: 5em;
 	}
 }
-
 /* prepare website for full responsiveness */
 @media screen and (max-width:320px) {}
 @media screen and (min-width:321px) and (max-width:639px) {}
@@ -678,7 +676,7 @@ div.menu {
 	table-layout: fixed;
 }
 
-li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
+li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover, h1.menu-toggle:hover {
 	/* Einzelne Kachel */
 	color:Black;
 	
@@ -703,8 +701,11 @@ li.page_item a:hover, li.menu-item a:hover, div.menu ul li a:hover {
 	display:table-cell;
 	text-align:center;
 }
+#menu-mobile li {
+	display: block;
+}
 /* Link der Menus */
-#site-navigation a {
+#site-navigation a , h1.menu-toggle {
 	display: block;
 	text-decoration: none;
 	color:white;
@@ -803,7 +804,37 @@ nav#sub {
 .foot-menu span{
 	padding: 5px;
 }
-
+#menu-mobile {
+	display: none;
+	position:relative;
+	margin-top: 76px;
+}
+/* breakpoint for display of mobile/normal menu */
+@media screen and (max-width:500px) {
+	#site-navigation {
+		text-align: center;
+	}
+	.menu-toggle {
+		display:block;
+	}
+	#menu-mobile {
+		display: block;
+	}
+	#menu-desktop {
+		display: none;
+	}
+}
+@media screen and (min-width:501px) {
+	.menu-toggle {
+		display: none;
+	}
+	#menu-mobile {
+		display: none;
+	}
+	#menu-desktop {
+		display: block;
+	}
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/

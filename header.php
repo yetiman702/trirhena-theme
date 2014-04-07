@@ -54,21 +54,23 @@ error_reporting(E_ALL);
 	      jQuery(".heading").fitText(1.2);
 	    </script>
 		<nav id="site-navigation" class="opacity-bg<?php echo((get_header_image())? " image" : ""); ?>" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'trirhena_theme' ); ?></h1>
+			<div class="menu-toggle"><a href="#content"><?php _e( 'Menu', 'trirhena_theme' ); ?></a></div>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'trirhena_theme' ); ?></a>
 			<?php
-				wp_nav_menu( array(
+				$menu = wp_nav_menu( array(
 								   // count only top-level entries
 								   'depth' => -1,
 								   // display here when set to top
 								   'theme_location' => 'primary',
+								   'echo'	=> 0,
 								   'container_class' => 'menu',
 								   'fallback_cb' => 'wp_page_menu'
 							 )
 				);
 			?>
+			<!-- Menu for mobile browsers and small screens -->
+			<div id="menu-desktop"><?php echo "$menu"; ?></div>
 		</nav><!-- #site-navigation -->
-
 		<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nolink">
 			<img src="<?php header_image(); ?>"
@@ -80,3 +82,5 @@ error_reporting(E_ALL);
 	</header>
 
 	<div id="content" class="site-content">
+	<div id="menu-mobile"><?php echo "$menu"; ?></div>
+		
