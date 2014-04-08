@@ -199,6 +199,7 @@ h2 {
 }
 p {
 	/* text-align: justify; */
+	margin-bottom: 20px;
 }
 b, strong {
 	font-weight: bold;
@@ -1002,6 +1003,10 @@ nav#sub {
 	font-size:28pt;
 	padding: 0 0 1em 0;
 }
+.entry-content h3, .entry-content h2 {
+	margin-top: 1em;
+}
+
 .entry-content p, .entry-content blockquote {
 }
 .entry-content h2, .entry-content h3, .entry-content h4 {
