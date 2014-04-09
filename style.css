@@ -118,6 +118,7 @@ q:before, q:after {
 	content: "";
 }
 blockquote:before {
+	/*
 	display: block;
 	font-size: 80px;
 	content: "\201C";
@@ -125,6 +126,7 @@ blockquote:before {
 	margin-top: 10px;
 	margin-left: -35px;
 	font-family: georgia, times, serif;
+	*/
 }
 blockquote, q {
 	quotes: "«" "»";
